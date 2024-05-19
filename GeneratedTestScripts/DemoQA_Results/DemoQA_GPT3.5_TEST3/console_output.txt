@@ -1,0 +1,301 @@
+[{'scenario': 'Verify that user can successfully fill out the student registration form with valid data', 'test_steps': [{'step': "Enter valid first name in the 'First Name' field", 'data': 'John'}, {'step': "Enter valid last name in the 'Last Name' field", 'data': 'Doe'}, {'step': "Enter valid email address in the 'Email' field", 'data': 'johndoe@example.com'}, {'step': "Select 'Male' gender option", 'data': 'Male'}, {'step': "Enter valid 10-digit mobile number in the 'Mobile Number' field", 'data': '1234567890'}, {'step': "Select a valid date of birth in the 'Date of Birth' field", 'data': '15 May 1990'}, {'step': "Select 'Sports' and 'Music' as hobbies", 'data': 'Sports, Music'}, {'step': 'Upload a valid picture', 'data': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png'}, {'step': "Enter valid current address in the 'Current Address' field", 'data': '123 Main Street, City, Country'}, {'step': "Select 'NCR' as State and 'Delhi' as City", 'data': 'NCR, Delhi'}, {'step': "Click on the 'Submit' button", 'data': ''}]}, {'scenario': 'Verify that validation messages are displayed for each field when submitting the form with invalid data', 'test_steps': [{'step': "Leave the 'First Name' field empty", 'data': ''}, {'step': "Leave the 'Email' field empty", 'data': ''}, {'step': "Select 'Female' gender option without selecting 'Male' or 'Other'", 'data': 'Female'}, {'step': "Enter an invalid mobile number (less than 10 digits) in the 'Mobile Number' field", 'data': '12345'}, {'step': "Select an invalid date of birth in the 'Date of Birth' field", 'data': '30 Feb 2000'}, {'step': 'Submit the form without selecting any hobbies', 'data': ''}, {'step': 'Submit the form without uploading a picture', 'data': ''}, {'step': "Leave the 'Current Address' field empty", 'data': ''}, {'step': "Select 'Select State' and 'Select City' without choosing any options", 'data': 'Select State, Select City'}, {'step': "Click on the 'Submit' button", 'data': ''}]}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Verify that user can successfully fill out the student registration form with valid data', 'test_steps': [{'step': "Enter valid first name in the 'First Name' field", 'data': 'John'}, {'step': "Enter valid last name in the 'Last Name' field", 'data': 'Doe'}, {'step': "Enter valid email address in the 'Email' field", 'data': 'johndoe@example.com'}, {'step': "Select 'Male' gender option", 'data': 'Male'}, {'step': "Enter valid 10-digit mobile number in the 'Mobile Number' field", 'data': '1234567890'}, {'step': "Select a valid date of birth in the 'Date of Birth' field", 'data': '15 May 1990'}, {'step': "Select 'Sports' and 'Music' as hobbies", 'data': 'Sports, Music'}, {'step': 'Upload a valid picture', 'data': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png'}, {'step': "Enter valid current address in the 'Current Address' field", 'data': '123 Main Street, City, Country'}, {'step': "Select 'NCR' as State and 'Delhi' as City", 'data': 'NCR, Delhi'}, {'step': "Click on the 'Submit' button", 'data': ''}]}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Verify that validation messages are displayed for each field when submitting the form with invalid data', 'test_steps': [{'step': "Leave the 'First Name' field empty", 'data': ''}, {'step': "Leave the 'Email' field empty", 'data': ''}, {'step': "Select 'Female' gender option without selecting 'Male' or 'Other'", 'data': 'Female'}, {'step': "Enter an invalid mobile number (less than 10 digits) in the 'Mobile Number' field", 'data': '12345'}, {'step': "Select an invalid date of birth in the 'Date of Birth' field", 'data': '30 Feb 2000'}, {'step': 'Submit the form without selecting any hobbies', 'data': ''}, {'step': 'Submit the form without uploading a picture', 'data': ''}, {'step': "Leave the 'Current Address' field empty", 'data': ''}, {'step': "Select 'Select State' and 'Select City' without choosing any options", 'data': 'Select State, Select City'}, {'step': "Click on the 'Submit' button", 'data': ''}]}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+{
+    "missing_requirements": [
+        {
+            "scenario": "Verify that validation messages are displayed for each field when submitting the form with invalid data",
+            "test_steps": [
+                {
+                    "step": "Leave the 'First Name' field empty",
+                    "data": ""
+                },
+                {
+                    "step": "Leave the 'Email' field empty",
+                    "data": ""
+                },
+                {
+                    "step": "Select 'Female' gender option without selecting 'Male' or 'Other'",
+                    "data": "Female"
+                },
+                {
+                    "step": "Enter an invalid mobile number (less than 10 digits) in the 'Mobile Number' field",
+                    "data": "12345"
+                },
+                {
+                    "step": "Select an invalid date of birth in the 'Date of Birth' field",
+                    "data": "30 Feb 2000"
+                },
+                {
+                    "step": "Submit the form without selecting any hobbies",
+                    "data": ""
+                },
+                {
+                    "step": "Submit the form without uploading a picture",
+                    "data": ""
+                },
+                {
+                    "step": "Leave the 'Current Address' field empty",
+                    "data": ""
+                },
+                {
+                    "step": "Select 'Select State' and 'Select City' without choosing any options",
+                    "data": "Select State, Select City"
+                },
+                {
+                    "step": "Click on the 'Submit' button",
+                    "data": ""
+                }
+            ]
+        }
+    ]
+}
+You're missing this requirements in 0 run {'missing_requirements': [{'scenario': 'Verify that validation messages are displayed for each field when submitting the form with invalid data', 'test_steps': [{'step': "Leave the 'First Name' field empty", 'data': ''}, {'step': "Leave the 'Email' field empty", 'data': ''}, {'step': "Select 'Female' gender option without selecting 'Male' or 'Other'", 'data': 'Female'}, {'step': "Enter an invalid mobile number (less than 10 digits) in the 'Mobile Number' field", 'data': '12345'}, {'step': "Select an invalid date of birth in the 'Date of Birth' field", 'data': '30 Feb 2000'}, {'step': 'Submit the form without selecting any hobbies', 'data': ''}, {'step': 'Submit the form without uploading a picture', 'data': ''}, {'step': "Leave the 'Current Address' field empty", 'data': ''}, {'step': "Select 'Select State' and 'Select City' without choosing any options", 'data': 'Select State, Select City'}, {'step': "Click on the 'Submit' button", 'data': ''}]}]}
+{
+    "missing_requirements": [
+        {
+            "scenario": "Verify that user can successfully fill out the student registration form with valid data",
+            "missing_steps": [
+                "Select 'Sports' and 'Music' as hobbies",
+                "Select 'NCR' as State and 'Delhi' as City"
+            ]
+        },
+        {
+            "scenario": "Verify that validation messages are displayed for each field when submitting the form with invalid data",
+            "missing_steps": [
+                "Leave the 'First Name' field empty",
+                "Leave the 'Email' field empty",
+                "Select 'Female' gender option without selecting 'Male' or 'Other'",
+                "Enter an invalid mobile number (less than 10 digits) in the 'Mobile Number' field",
+                "Select an invalid date of birth in the 'Date of Birth' field",
+                "Submit the form without selecting any hobbies",
+                "Submit the form without uploading a picture",
+                "Leave the 'Current Address' field empty",
+                "Select 'Select State' and 'Select City' without choosing any options"
+            ]
+        }
+    ]
+}
+You're missing this requirements in 1 run {'missing_requirements': [{'scenario': 'Verify that user can successfully fill out the student registration form with valid data', 'missing_steps': ["Select 'Sports' and 'Music' as hobbies", "Select 'NCR' as State and 'Delhi' as City"]}, {'scenario': 'Verify that validation messages are displayed for each field when submitting the form with invalid data', 'missing_steps': ["Leave the 'First Name' field empty", "Leave the 'Email' field empty", "Select 'Female' gender option without selecting 'Male' or 'Other'", "Enter an invalid mobile number (less than 10 digits) in the 'Mobile Number' field", "Select an invalid date of birth in the 'Date of Birth' field", 'Submit the form without selecting any hobbies', 'Submit the form without uploading a picture', "Leave the 'Current Address' field empty", "Select 'Select State' and 'Select City' without choosing any options"]}]}
+Your test execution output:   Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_req_fix_1.py", line 63, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_req_fix_1.py", line 17, in test_scenario_0
+    gender.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input name="gender" required="" type="radio" id="gender-radio-1" class="custom-control-input" value="Male"> is not clickable at point (476, 336). Other element would receive the click: <label title="" for="gender-radio-1" class="custom-control-label">...</label>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000104bea940 chromedriver + 4368704
+1   chromedriver                        0x0000000104be2dd4 chromedriver + 4337108
+2   chromedriver                        0x0000000104806c04 chromedriver + 289796
+3   chromedriver                        0x000000010484e88c chromedriver + 583820
+4   chromedriver                        0x000000010484ce20 chromedriver + 577056
+5   chromedriver                        0x000000010484afac chromedriver + 569260
+6   chromedriver                        0x000000010484a13c chromedriver + 565564
+7   chromedriver                        0x000000010483f940 chromedriver + 522560
+8   chromedriver                        0x000000010483f368 chromedriver + 521064
+9   chromedriver                        0x00000001048815ec chromedriver + 792044
+10  chromedriver                        0x000000010483dab4 chromedriver + 514740
+11  chromedriver                        0x000000010483e50c chromedriver + 517388
+12  chromedriver                        0x0000000104baee5c chromedriver + 4124252
+13  chromedriver                        0x0000000104bb3c4c chromedriver + 4144204
+14  chromedriver                        0x0000000104b94824 chromedriver + 4016164
+15  chromedriver                        0x0000000104bb457c chromedriver + 4146556
+16  chromedriver                        0x0000000104b862d8 chromedriver + 3957464
+17  chromedriver                        0x0000000104bd3ec4 chromedriver + 4275908
+18  chromedriver                        0x0000000104bd4040 chromedriver + 4276288
+19  chromedriver                        0x0000000104be2a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+{
+    "implementation_errors": [
+        {
+            "error": "ElementClickInterceptedException",
+            "description": "The 'gender' radio button is not clickable due to another element receiving the click.",
+            "suggestion": "To fix this, you can use JavaScript to scroll the element into view before clicking it, or you can click on the label element associated with the radio button instead of the radio button itself."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 63, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 22, in test_scenario_0
+    sports_checkbox = driver.find_element(By.XPATH, "//input[@value='Sports']")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value='Sports']"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100b1e940 chromedriver + 4368704
+1   chromedriver                        0x0000000100b16dd4 chromedriver + 4337108
+2   chromedriver                        0x000000010073ac04 chromedriver + 289796
+3   chromedriver                        0x000000010077ce00 chromedriver + 560640
+4   chromedriver                        0x00000001007b55ec chromedriver + 792044
+5   chromedriver                        0x0000000100771ab4 chromedriver + 514740
+6   chromedriver                        0x000000010077250c chromedriver + 517388
+7   chromedriver                        0x0000000100ae2e5c chromedriver + 4124252
+8   chromedriver                        0x0000000100ae7c4c chromedriver + 4144204
+9   chromedriver                        0x0000000100ac8824 chromedriver + 4016164
+10  chromedriver                        0x0000000100ae857c chromedriver + 4146556
+11  chromedriver                        0x0000000100aba2d8 chromedriver + 3957464
+12  chromedriver                        0x0000000100b07ec4 chromedriver + 4275908
+13  chromedriver                        0x0000000100b08040 chromedriver + 4276288
+14  chromedriver                        0x0000000100b16a34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 1 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 64, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 23, in test_scenario_0
+    sports_checkbox = driver.find_element(By.XPATH, "//input[@value='Sports']")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value='Sports']"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001010fa940 chromedriver + 4368704
+1   chromedriver                        0x00000001010f2dd4 chromedriver + 4337108
+2   chromedriver                        0x0000000100d16c04 chromedriver + 289796
+3   chromedriver                        0x0000000100d58e00 chromedriver + 560640
+4   chromedriver                        0x0000000100d915ec chromedriver + 792044
+5   chromedriver                        0x0000000100d4dab4 chromedriver + 514740
+6   chromedriver                        0x0000000100d4e50c chromedriver + 517388
+7   chromedriver                        0x00000001010bee5c chromedriver + 4124252
+8   chromedriver                        0x00000001010c3c4c chromedriver + 4144204
+9   chromedriver                        0x00000001010a4824 chromedriver + 4016164
+10  chromedriver                        0x00000001010c457c chromedriver + 4146556
+11  chromedriver                        0x00000001010962d8 chromedriver + 3957464
+12  chromedriver                        0x00000001010e3ec4 chromedriver + 4275908
+13  chromedriver                        0x00000001010e4040 chromedriver + 4276288
+14  chromedriver                        0x00000001010f2a34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 2 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 64, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 24, in test_scenario_0
+    sports_checkbox.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <label title="" for="hobbies-checkbox-1" class="custom-control-label">...</label> is not clickable at point (515, 182). Other element would receive the click: <div class="react-datepicker__day-name">...</div>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000102b56940 chromedriver + 4368704
+1   chromedriver                        0x0000000102b4edd4 chromedriver + 4337108
+2   chromedriver                        0x0000000102772c04 chromedriver + 289796
+3   chromedriver                        0x00000001027ba88c chromedriver + 583820
+4   chromedriver                        0x00000001027b8e20 chromedriver + 577056
+5   chromedriver                        0x00000001027b6fac chromedriver + 569260
+6   chromedriver                        0x00000001027b613c chromedriver + 565564
+7   chromedriver                        0x00000001027ab940 chromedriver + 522560
+8   chromedriver                        0x00000001027ab368 chromedriver + 521064
+9   chromedriver                        0x00000001027ed5ec chromedriver + 792044
+10  chromedriver                        0x00000001027a9ab4 chromedriver + 514740
+11  chromedriver                        0x00000001027aa50c chromedriver + 517388
+12  chromedriver                        0x0000000102b1ae5c chromedriver + 4124252
+13  chromedriver                        0x0000000102b1fc4c chromedriver + 4144204
+14  chromedriver                        0x0000000102b00824 chromedriver + 4016164
+15  chromedriver                        0x0000000102b2057c chromedriver + 4146556
+16  chromedriver                        0x0000000102af22d8 chromedriver + 3957464
+17  chromedriver                        0x0000000102b3fec4 chromedriver + 4275908
+18  chromedriver                        0x0000000102b40040 chromedriver + 4276288
+19  chromedriver                        0x0000000102b4ea34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 3 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 64, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 31, in test_scenario_0
+    state = Select(driver.find_element(By.ID, "state"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 39, in __init__
+    raise UnexpectedTagNameException(f"Select only works on <select> elements, not on {webelement.tag_name}")
+selenium.common.exceptions.UnexpectedTagNameException: Message: Select only works on <select> elements, not on div
+
+
+Your test execution output in 4 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 66, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 32, in test_scenario_0
+    state = Select(state_dropdown)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 39, in __init__
+    raise UnexpectedTagNameException(f"Select only works on <select> elements, not on {webelement.tag_name}")
+selenium.common.exceptions.UnexpectedTagNameException: Message: Select only works on <select> elements, not on div
+
+
+Execution time: 196.8336639404297 seconds
+
+GPT3.5 Prompt tokens: 81957, $0.0409785
+GPT3.5 Response tokens: 7609, $0.0114135
+
+GPT4 Prompt time: 81957, $0.81957
+GPT4 Response tokens: 7609, $0.22827
+

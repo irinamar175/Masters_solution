@@ -1,0 +1,213 @@
+[{'scenario': 'Search with valid keyword', 'steps': ['Navigate to the search page', "Enter a valid keyword in the 'Meklējamais vārds vai frāze' field", "Click the 'Meklēt' button"], 'input_data': {'keyword': 'auto'}, 'expected_result': "Search results related to 'auto' are displayed"}, {'scenario': 'Search with empty keyword', 'steps': ['Navigate to the search page', "Leave the 'Meklējamais vārds vai frāze' field empty", "Click the 'Meklēt' button"], 'input_data': {'keyword': ''}, 'expected_result': 'An error message or prompt indicating that the keyword field cannot be empty'}, {'scenario': 'Search with special characters in keyword', 'steps': ['Navigate to the search page', "Enter special characters in the 'Meklējamais vārds vai frāze' field", "Click the 'Meklēt' button"], 'input_data': {'keyword': '@#$%^&*()'}, 'expected_result': 'An error message or no results found message, depending on how the system handles special characters'}, {'scenario': 'Search with a valid section selected', 'steps': ['Navigate to the search page', "Select a valid section from the 'Sadaļa' dropdown", "Click the 'Meklēt' button"], 'input_data': {'section': 'Transports'}, 'expected_result': "Search results related to the 'Transports' section are displayed"}, {'scenario': 'Search with no section selected', 'steps': ['Navigate to the search page', "Do not select any section from the 'Sadaļa' dropdown", "Click the 'Meklēt' button"], 'input_data': {'section': ''}, 'expected_result': 'An error message or all sections are searched'}, {'scenario': 'Search with a specific region selected', 'steps': ['Navigate to the search page', "Select a specific region from the 'Pilsēta, rajons' dropdown", "Click the 'Meklēt' button"], 'input_data': {'region': 'Rīga'}, 'expected_result': "Search results related to the 'Rīga' region are displayed"}, {'scenario': "Search with 'Visi sludinājumi' region selected", 'steps': ['Navigate to the search page', "Select 'Visi sludinājumi' from the 'Pilsēta, rajons' dropdown", "Click the 'Meklēt' button"], 'input_data': {'region': 'Visi sludinājumi'}, 'expected_result': 'Search results from all regions are displayed'}, {'scenario': 'Search with a specific time period selected', 'steps': ['Navigate to the search page', "Select a specific time period from the 'Meklēt par periodu' dropdown", "Click the 'Meklēt' button"], 'input_data': {'time_period': 'Pēdējā nedēļā'}, 'expected_result': 'Search results from the last week are displayed'}, {'scenario': 'Search with default time period selected', 'steps': ['Navigate to the search page', "Ensure the default option 'Starp visiem sludinājumiem' is selected in the 'Meklēt par periodu' dropdown", "Click the 'Meklēt' button"], 'input_data': {'time_period': 'Starp visiem sludinājumiem'}, 'expected_result': 'Search results from all time periods are displayed'}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Search with valid keyword', 'steps': ['Navigate to the search page', "Enter a valid keyword in the 'Meklējamais vārds vai frāze' field", "Click the 'Meklēt' button"], 'input_data': {'keyword': 'auto'}, 'expected_result': "Search results related to 'auto' are displayed"}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Search with empty keyword', 'steps': ['Navigate to the search page', "Leave the 'Meklējamais vārds vai frāze' field empty", "Click the 'Meklēt' button"], 'input_data': {'keyword': ''}, 'expected_result': 'An error message or prompt indicating that the keyword field cannot be empty'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_2():
+    """
+    {'scenario': 'Search with special characters in keyword', 'steps': ['Navigate to the search page', "Enter special characters in the 'Meklējamais vārds vai frāze' field", "Click the 'Meklēt' button"], 'input_data': {'keyword': '@#$%^&*()'}, 'expected_result': 'An error message or no results found message, depending on how the system handles special characters'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_3():
+    """
+    {'scenario': 'Search with a valid section selected', 'steps': ['Navigate to the search page', "Select a valid section from the 'Sadaļa' dropdown", "Click the 'Meklēt' button"], 'input_data': {'section': 'Transports'}, 'expected_result': "Search results related to the 'Transports' section are displayed"}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_4():
+    """
+    {'scenario': 'Search with no section selected', 'steps': ['Navigate to the search page', "Do not select any section from the 'Sadaļa' dropdown", "Click the 'Meklēt' button"], 'input_data': {'section': ''}, 'expected_result': 'An error message or all sections are searched'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_5():
+    """
+    {'scenario': 'Search with a specific region selected', 'steps': ['Navigate to the search page', "Select a specific region from the 'Pilsēta, rajons' dropdown", "Click the 'Meklēt' button"], 'input_data': {'region': 'Rīga'}, 'expected_result': "Search results related to the 'Rīga' region are displayed"}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_6():
+    """
+    {'scenario': "Search with 'Visi sludinājumi' region selected", 'steps': ['Navigate to the search page', "Select 'Visi sludinājumi' from the 'Pilsēta, rajons' dropdown", "Click the 'Meklēt' button"], 'input_data': {'region': 'Visi sludinājumi'}, 'expected_result': 'Search results from all regions are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_7():
+    """
+    {'scenario': 'Search with a specific time period selected', 'steps': ['Navigate to the search page', "Select a specific time period from the 'Meklēt par periodu' dropdown", "Click the 'Meklēt' button"], 'input_data': {'time_period': 'Pēdējā nedēļā'}, 'expected_result': 'Search results from the last week are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_8():
+    """
+    {'scenario': 'Search with default time period selected', 'steps': ['Navigate to the search page', "Ensure the default option 'Starp visiem sludinājumiem' is selected in the 'Meklēt par periodu' dropdown", "Click the 'Meklēt' button"], 'input_data': {'time_period': 'Starp visiem sludinājumiem'}, 'expected_result': 'Search results from all time periods are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+    try:
+        test_scenario_2()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_2:", e)
+        
+    try:
+        test_scenario_3()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_3:", e)
+        
+    try:
+        test_scenario_4()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_4:", e)
+        
+    try:
+        test_scenario_5()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_5:", e)
+        
+    try:
+        test_scenario_6()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_6:", e)
+        
+    try:
+        test_scenario_7()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_7:", e)
+        
+    try:
+        test_scenario_8()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_8:", e)
+        
+{
+    "missing_requirements": []
+}
+Your test execution output:   Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 113, in <module>
+    test_search_with_valid_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 15, in test_search_with_valid_keyword
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.content")))
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010493e940 chromedriver + 4368704
+1   chromedriver                        0x0000000104936dd4 chromedriver + 4337108
+2   chromedriver                        0x000000010455ac04 chromedriver + 289796
+3   chromedriver                        0x000000010459ce00 chromedriver + 560640
+4   chromedriver                        0x00000001045d55ec chromedriver + 792044
+5   chromedriver                        0x0000000104591ab4 chromedriver + 514740
+6   chromedriver                        0x000000010459250c chromedriver + 517388
+7   chromedriver                        0x0000000104902e5c chromedriver + 4124252
+8   chromedriver                        0x0000000104907c4c chromedriver + 4144204
+9   chromedriver                        0x00000001048e8824 chromedriver + 4016164
+10  chromedriver                        0x000000010490857c chromedriver + 4146556
+11  chromedriver                        0x00000001048da2d8 chromedriver + 3957464
+12  chromedriver                        0x0000000104927ec4 chromedriver + 4275908
+13  chromedriver                        0x0000000104928040 chromedriver + 4276288
+14  chromedriver                        0x0000000104936a34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+{
+    "implementation_errors": [
+        {
+            "error": "Incorrect CSS Selector",
+            "description": "The CSS selector 'div.content' used in WebDriverWait to wait for the search results page to load does not exist in the provided HTML structure of the page. This is causing a TimeoutException.",
+            "suggestion": "Review the HTML structure of the search results page and update the CSS selector to correctly target the element that signifies the page has loaded. For example, if the results are displayed in a div with a specific class or ID, use that as the selector."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 114, in <module>
+    test_search_with_empty_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 26, in test_search_with_empty_keyword
+    assert "Lūdzu, ievadiet meklēšanas vārdu" in driver.page_source, "No error message for empty keyword"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: No error message for empty keyword
+
+Your test execution output in 1 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 115, in <module>
+    test_search_with_special_characters_in_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 38, in test_search_with_special_characters_in_keyword
+    assert "Nekas netika atrasts" in driver.page_source or "Nav rezultātu" in driver.page_source, "Results or error message not as expected for special characters"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Results or error message not as expected for special characters
+
+Your test execution output in 2 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 115, in <module>
+    test_search_with_special_characters_in_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 38, in test_search_with_special_characters_in_keyword
+    assert "Nekas netika atrasts" in driver.page_source or "Nav rezultātu" in driver.page_source, "Results or error message not as expected for special characters"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Results or error message not as expected for special characters
+
+Your test execution output in 3 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 115, in <module>
+    test_search_with_special_characters_in_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 38, in test_search_with_special_characters_in_keyword
+    assert "Nekas netika atrasts" in driver.page_source or "Nav rezultātu" in driver.page_source, "Results or error message not as expected for special characters"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Results or error message not as expected for special characters
+
+Your test execution output in 4 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 115, in <module>
+    test_search_with_special_characters_in_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 38, in test_search_with_special_characters_in_keyword
+    assert "Nekas netika atrasts" in driver.page_source or "Nav rezultātu" in driver.page_source, "Results or error message not as expected for special characters"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Results or error message not as expected for special characters
+
+Execution time: 550.1669707298279 seconds
+
+GPT3.5 Prompt tokens: 61865, $0.030932499999999998
+GPT3.5 Response tokens: 10147, $0.0152205
+
+GPT4 Prompt time: 61865, $0.61865
+GPT4 Response tokens: 10147, $0.30441
+

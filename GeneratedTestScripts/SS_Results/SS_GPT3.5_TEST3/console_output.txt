@@ -1,0 +1,77 @@
+[{'scenario': 'Verify that the search form can be submitted with valid input data', 'test_steps': [{'step': "Enter a valid search keyword in the 'Meklējamais vārds vai frāze' field", 'input_data': "Keyword: 'car'"}, {'step': "Select a valid section from the 'Sadaļa' dropdown", 'input_data': "Section: 'Transports'"}, {'step': "Select a valid deal type from the 'Darījuma veids' dropdown", 'input_data': "Deal type: 'Pārdod'"}, {'step': "Select a valid city or region from the 'Pilsēta, rajons' dropdown", 'input_data': "City/Region: 'Rīga'"}, {'step': "Select a valid period from the 'Meklēt par periodu' dropdown", 'input_data': "Period: 'Pēdējās 3 dienās'"}, {'step': "Click on the 'Meklēt' button", 'input_data': 'N/A'}]}, {'scenario': 'Verify that the search form cannot be submitted with invalid input data', 'test_steps': [{'step': "Leave the 'Meklējamais vārds vai frāze' field empty", 'input_data': "Keyword: ''"}, {'step': "Select an invalid section from the 'Sadaļa' dropdown", 'input_data': "Section: '-1'"}, {'step': "Select an invalid deal type from the 'Darījuma veids' dropdown", 'input_data': "Deal type: ''"}, {'step': "Select an invalid city or region from the 'Pilsēta, rajons' dropdown", 'input_data': "City/Region: '0'"}, {'step': "Select an invalid period from the 'Meklēt par periodu' dropdown", 'input_data': "Period: 'invalid'"}, {'step': "Click on the 'Meklēt' button", 'input_data': 'N/A'}]}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Verify that the search form can be submitted with valid input data', 'test_steps': [{'step': "Enter a valid search keyword in the 'Meklējamais vārds vai frāze' field", 'input_data': "Keyword: 'car'"}, {'step': "Select a valid section from the 'Sadaļa' dropdown", 'input_data': "Section: 'Transports'"}, {'step': "Select a valid deal type from the 'Darījuma veids' dropdown", 'input_data': "Deal type: 'Pārdod'"}, {'step': "Select a valid city or region from the 'Pilsēta, rajons' dropdown", 'input_data': "City/Region: 'Rīga'"}, {'step': "Select a valid period from the 'Meklēt par periodu' dropdown", 'input_data': "Period: 'Pēdējās 3 dienās'"}, {'step': "Click on the 'Meklēt' button", 'input_data': 'N/A'}]}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Verify that the search form cannot be submitted with invalid input data', 'test_steps': [{'step': "Leave the 'Meklējamais vārds vai frāze' field empty", 'input_data': "Keyword: ''"}, {'step': "Select an invalid section from the 'Sadaļa' dropdown", 'input_data': "Section: '-1'"}, {'step': "Select an invalid deal type from the 'Darījuma veids' dropdown", 'input_data': "Deal type: ''"}, {'step': "Select an invalid city or region from the 'Pilsēta, rajons' dropdown", 'input_data': "City/Region: '0'"}, {'step': "Select an invalid period from the 'Meklēt par periodu' dropdown", 'input_data': "Period: 'invalid'"}, {'step': "Click on the 'Meklēt' button", 'input_data': 'N/A'}]}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+{
+    "missing_requirements": []
+}
+Your test execution output:   Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 65, in <module>
+    test_scenario_1()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 47, in test_scenario_1
+    deal_type_dropdown.select_by_value(deal_type)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 84, in select_by_value
+    raise NoSuchElementException(f"Cannot locate option with value: {value}")
+selenium.common.exceptions.NoSuchElementException: Message: Cannot locate option with value: ; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+
+{
+    "implementation_errors": [
+        {
+            "error": "NoSuchElementException",
+            "location": "test_scenario_1",
+            "line": 47,
+            "description": "The test script is trying to select options in dropdowns by value, but the values provided are incorrect or missing. This results in NoSuchElementException.",
+            "suggestion": "Ensure that the values provided for selecting options in dropdowns are correct and exist in the dropdown options. Check the HTML content to verify the correct values."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 65, in <module>
+    test_scenario_1()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 51, in test_scenario_1
+    period_dropdown.select_by_value(period)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 84, in select_by_value
+    raise NoSuchElementException(f"Cannot locate option with value: {value}")
+selenium.common.exceptions.NoSuchElementException: Message: Cannot locate option with value: invalid; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+
+Your test execution output in 1 run  
+Execution time: 70.26166486740112 seconds
+
+GPT3.5 Prompt tokens: 31387, $0.0156935
+GPT3.5 Response tokens: 2591, $0.0038865
+
+GPT4 Prompt time: 31387, $0.31387000000000004
+GPT4 Response tokens: 2591, $0.07773000000000001
+

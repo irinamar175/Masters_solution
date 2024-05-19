@@ -1,0 +1,283 @@
+[{'scenario': 'Verify that user can successfully fill out the student registration form with valid data', 'test_steps': [{'step': 'Enter valid first name', 'input_data': 'John'}, {'step': 'Enter valid last name', 'input_data': 'Doe'}, {'step': 'Enter valid email address', 'input_data': 'johndoe@example.com'}, {'step': 'Select gender as Male', 'input_data': 'Male'}, {'step': 'Enter valid mobile number', 'input_data': '1234567890'}, {'step': 'Select valid date of birth', 'input_data': '15 May 1990'}, {'step': 'Select subjects', 'input_data': 'Maths, English'}, {'step': 'Select hobbies as Sports and Reading', 'input_data': 'Sports, Reading'}, {'step': 'Upload a valid picture', 'input_data': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png'}, {'step': 'Enter valid current address', 'input_data': '123 Main Street, City, Country'}, {'step': 'Select state as California and city as Los Angeles', 'input_data': 'California, Los Angeles'}, {'step': 'Click on Submit button', 'input_data': 'Submit'}]}, {'scenario': 'Verify that user cannot submit the form without entering mandatory fields', 'test_steps': [{'step': 'Leave first name field empty', 'input_data': ''}, {'step': 'Leave last name field empty', 'input_data': ''}, {'step': 'Leave email field empty', 'input_data': ''}, {'step': 'Select no gender option', 'input_data': ''}, {'step': 'Leave mobile number field empty', 'input_data': ''}, {'step': 'Leave date of birth field empty', 'input_data': ''}, {'step': 'Do not select any subjects', 'input_data': ''}, {'step': 'Do not select any hobbies', 'input_data': ''}, {'step': 'Do not upload a picture', 'input_data': ''}, {'step': 'Leave current address field empty', 'input_data': ''}, {'step': 'Do not select state and city', 'input_data': ''}, {'step': 'Click on Submit button', 'input_data': 'Submit'}]}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Verify that user can successfully fill out the student registration form with valid data', 'test_steps': [{'step': 'Enter valid first name', 'input_data': 'John'}, {'step': 'Enter valid last name', 'input_data': 'Doe'}, {'step': 'Enter valid email address', 'input_data': 'johndoe@example.com'}, {'step': 'Select gender as Male', 'input_data': 'Male'}, {'step': 'Enter valid mobile number', 'input_data': '1234567890'}, {'step': 'Select valid date of birth', 'input_data': '15 May 1990'}, {'step': 'Select subjects', 'input_data': 'Maths, English'}, {'step': 'Select hobbies as Sports and Reading', 'input_data': 'Sports, Reading'}, {'step': 'Upload a valid picture', 'input_data': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png'}, {'step': 'Enter valid current address', 'input_data': '123 Main Street, City, Country'}, {'step': 'Select state as California and city as Los Angeles', 'input_data': 'California, Los Angeles'}, {'step': 'Click on Submit button', 'input_data': 'Submit'}]}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Verify that user cannot submit the form without entering mandatory fields', 'test_steps': [{'step': 'Leave first name field empty', 'input_data': ''}, {'step': 'Leave last name field empty', 'input_data': ''}, {'step': 'Leave email field empty', 'input_data': ''}, {'step': 'Select no gender option', 'input_data': ''}, {'step': 'Leave mobile number field empty', 'input_data': ''}, {'step': 'Leave date of birth field empty', 'input_data': ''}, {'step': 'Do not select any subjects', 'input_data': ''}, {'step': 'Do not select any hobbies', 'input_data': ''}, {'step': 'Do not upload a picture', 'input_data': ''}, {'step': 'Leave current address field empty', 'input_data': ''}, {'step': 'Do not select state and city', 'input_data': ''}, {'step': 'Click on Submit button', 'input_data': 'Submit'}]}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+{
+    "missing_requirements": []
+}
+Your test execution output:   Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 62, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 19, in test_scenario_0
+    gender.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <div class="custom-control custom-radio custom-control-inline">...</div> is not clickable at point (497, 583). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" style="border: 0px; vertical-align: bottom;" data-google-container-id="1"></iframe>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x00000001005c6940 chromedriver + 4368704
+1   chromedriver                        0x00000001005bedd4 chromedriver + 4337108
+2   chromedriver                        0x00000001001e2c04 chromedriver + 289796
+3   chromedriver                        0x000000010022a88c chromedriver + 583820
+4   chromedriver                        0x0000000100228e20 chromedriver + 577056
+5   chromedriver                        0x0000000100226fac chromedriver + 569260
+6   chromedriver                        0x000000010022613c chromedriver + 565564
+7   chromedriver                        0x000000010021b940 chromedriver + 522560
+8   chromedriver                        0x000000010021b368 chromedriver + 521064
+9   chromedriver                        0x000000010025d5ec chromedriver + 792044
+10  chromedriver                        0x0000000100219ab4 chromedriver + 514740
+11  chromedriver                        0x000000010021a50c chromedriver + 517388
+12  chromedriver                        0x000000010058ae5c chromedriver + 4124252
+13  chromedriver                        0x000000010058fc4c chromedriver + 4144204
+14  chromedriver                        0x0000000100570824 chromedriver + 4016164
+15  chromedriver                        0x000000010059057c chromedriver + 4146556
+16  chromedriver                        0x00000001005622d8 chromedriver + 3957464
+17  chromedriver                        0x00000001005afec4 chromedriver + 4275908
+18  chromedriver                        0x00000001005b0040 chromedriver + 4276288
+19  chromedriver                        0x00000001005bea34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+{
+    "implementation_errors": [
+        {
+            "error": "Element not clickable",
+            "location": "test_scenario_0()",
+            "description": "The 'gender' element is not clickable due to an overlaying iframe. Need to wait for the overlay to disappear or interact with the element in a different way.",
+            "suggestion": "Add a wait before clicking the 'gender' element or use JavaScript to interact with the element."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 61, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 35, in test_scenario_0
+    city.send_keys("Los Angeles")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 231, in send_keys
+    self._execute(
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x00000001028f2940 chromedriver + 4368704
+1   chromedriver                        0x00000001028eadd4 chromedriver + 4337108
+2   chromedriver                        0x000000010250ea68 chromedriver + 289384
+3   chromedriver                        0x000000010254bc40 chromedriver + 539712
+4   chromedriver                        0x000000010254a5c8 chromedriver + 533960
+5   chromedriver                        0x0000000102547368 chromedriver + 521064
+6   chromedriver                        0x00000001025895ec chromedriver + 792044
+7   chromedriver                        0x0000000102545ab4 chromedriver + 514740
+8   chromedriver                        0x000000010254650c chromedriver + 517388
+9   chromedriver                        0x00000001028b6e5c chromedriver + 4124252
+10  chromedriver                        0x00000001028bbc4c chromedriver + 4144204
+11  chromedriver                        0x000000010289c824 chromedriver + 4016164
+12  chromedriver                        0x00000001028bc57c chromedriver + 4146556
+13  chromedriver                        0x000000010288e2d8 chromedriver + 3957464
+14  chromedriver                        0x00000001028dbec4 chromedriver + 4275908
+15  chromedriver                        0x00000001028dc040 chromedriver + 4276288
+16  chromedriver                        0x00000001028eaa34 chromedriver + 4336180
+17  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+18  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 1 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 62, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 36, in test_scenario_0
+    city.send_keys("Los Angeles")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 231, in send_keys
+    self._execute(
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000105362940 chromedriver + 4368704
+1   chromedriver                        0x000000010535add4 chromedriver + 4337108
+2   chromedriver                        0x0000000104f7ea68 chromedriver + 289384
+3   chromedriver                        0x0000000104fbbc40 chromedriver + 539712
+4   chromedriver                        0x0000000104fba5c8 chromedriver + 533960
+5   chromedriver                        0x0000000104fb7368 chromedriver + 521064
+6   chromedriver                        0x0000000104ff95ec chromedriver + 792044
+7   chromedriver                        0x0000000104fb5ab4 chromedriver + 514740
+8   chromedriver                        0x0000000104fb650c chromedriver + 517388
+9   chromedriver                        0x0000000105326e5c chromedriver + 4124252
+10  chromedriver                        0x000000010532bc4c chromedriver + 4144204
+11  chromedriver                        0x000000010530c824 chromedriver + 4016164
+12  chromedriver                        0x000000010532c57c chromedriver + 4146556
+13  chromedriver                        0x00000001052fe2d8 chromedriver + 3957464
+14  chromedriver                        0x000000010534bec4 chromedriver + 4275908
+15  chromedriver                        0x000000010534c040 chromedriver + 4276288
+16  chromedriver                        0x000000010535aa34 chromedriver + 4336180
+17  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+18  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 2 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 62, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 13, in test_scenario_0
+    first_name = driver.find_element(By.ID, "firstName")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="firstName"]"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105262940 chromedriver + 4368704
+1   chromedriver                        0x000000010525add4 chromedriver + 4337108
+2   chromedriver                        0x0000000104e7ec04 chromedriver + 289796
+3   chromedriver                        0x0000000104ec0e00 chromedriver + 560640
+4   chromedriver                        0x0000000104ef95ec chromedriver + 792044
+5   chromedriver                        0x0000000104eb5ab4 chromedriver + 514740
+6   chromedriver                        0x0000000104eb650c chromedriver + 517388
+7   chromedriver                        0x0000000105226e5c chromedriver + 4124252
+8   chromedriver                        0x000000010522bc4c chromedriver + 4144204
+9   chromedriver                        0x000000010520c824 chromedriver + 4016164
+10  chromedriver                        0x000000010522c57c chromedriver + 4146556
+11  chromedriver                        0x00000001051fe2d8 chromedriver + 3957464
+12  chromedriver                        0x000000010524bec4 chromedriver + 4275908
+13  chromedriver                        0x000000010524c040 chromedriver + 4276288
+14  chromedriver                        0x000000010525aa34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 3 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 62, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 36, in test_scenario_0
+    city.send_keys("Los Angeles")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 231, in send_keys
+    self._execute(
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000102c66940 chromedriver + 4368704
+1   chromedriver                        0x0000000102c5edd4 chromedriver + 4337108
+2   chromedriver                        0x0000000102882a68 chromedriver + 289384
+3   chromedriver                        0x00000001028bfc40 chromedriver + 539712
+4   chromedriver                        0x00000001028be5c8 chromedriver + 533960
+5   chromedriver                        0x00000001028bb368 chromedriver + 521064
+6   chromedriver                        0x00000001028fd5ec chromedriver + 792044
+7   chromedriver                        0x00000001028b9ab4 chromedriver + 514740
+8   chromedriver                        0x00000001028ba50c chromedriver + 517388
+9   chromedriver                        0x0000000102c2ae5c chromedriver + 4124252
+10  chromedriver                        0x0000000102c2fc4c chromedriver + 4144204
+11  chromedriver                        0x0000000102c10824 chromedriver + 4016164
+12  chromedriver                        0x0000000102c3057c chromedriver + 4146556
+13  chromedriver                        0x0000000102c022d8 chromedriver + 3957464
+14  chromedriver                        0x0000000102c4fec4 chromedriver + 4275908
+15  chromedriver                        0x0000000102c50040 chromedriver + 4276288
+16  chromedriver                        0x0000000102c5ea34 chromedriver + 4336180
+17  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+18  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 4 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 62, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 36, in test_scenario_0
+    city.send_keys("Los Angeles")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 231, in send_keys
+    self._execute(
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000102446940 chromedriver + 4368704
+1   chromedriver                        0x000000010243edd4 chromedriver + 4337108
+2   chromedriver                        0x0000000102062a68 chromedriver + 289384
+3   chromedriver                        0x000000010209fc40 chromedriver + 539712
+4   chromedriver                        0x000000010209e5c8 chromedriver + 533960
+5   chromedriver                        0x000000010209b368 chromedriver + 521064
+6   chromedriver                        0x00000001020dd5ec chromedriver + 792044
+7   chromedriver                        0x0000000102099ab4 chromedriver + 514740
+8   chromedriver                        0x000000010209a50c chromedriver + 517388
+9   chromedriver                        0x000000010240ae5c chromedriver + 4124252
+10  chromedriver                        0x000000010240fc4c chromedriver + 4144204
+11  chromedriver                        0x00000001023f0824 chromedriver + 4016164
+12  chromedriver                        0x000000010241057c chromedriver + 4146556
+13  chromedriver                        0x00000001023e22d8 chromedriver + 3957464
+14  chromedriver                        0x000000010242fec4 chromedriver + 4275908
+15  chromedriver                        0x0000000102430040 chromedriver + 4276288
+16  chromedriver                        0x000000010243ea34 chromedriver + 4336180
+17  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+18  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Execution time: 138.4990110397339 seconds
+
+GPT3.5 Prompt tokens: 28322, $0.014161
+GPT3.5 Response tokens: 5337, $0.0080055
+
+GPT4 Prompt time: 28322, $0.28322
+GPT4 Response tokens: 5337, $0.16011
+

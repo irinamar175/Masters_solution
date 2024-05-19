@@ -1,0 +1,331 @@
+[{'scenario': 'Search with valid keyword', 'description': 'Test the search functionality with a valid keyword.', 'steps': ['Navigate to the search page.', "Enter a valid keyword in the 'Meklējamais vārds vai frāze' field.", "Click the 'Meklēt' button."], 'input_data': {'keyword': 'auto'}, 'expected_result': "Search results related to 'auto' are displayed."}, {'scenario': 'Search with empty keyword', 'description': 'Test the search functionality with an empty keyword.', 'steps': ['Navigate to the search page.', "Leave the 'Meklējamais vārds vai frāze' field empty.", "Click the 'Meklēt' button."], 'input_data': {'keyword': ''}, 'expected_result': 'An error message is displayed or no search results are shown.'}, {'scenario': 'Search with special characters', 'description': 'Test the search functionality with special characters.', 'steps': ['Navigate to the search page.', "Enter special characters in the 'Meklējamais vārds vai frāze' field.", "Click the 'Meklēt' button."], 'input_data': {'keyword': '@#$%^&*()'}, 'expected_result': 'An error message is displayed or no relevant search results are shown.'}, {'scenario': 'Search with a specific category selected', 'description': 'Test the search functionality with a specific category selected.', 'steps': ['Navigate to the search page.', "Select a category from the 'Sadaļa' dropdown.", "Click the 'Meklēt' button."], 'input_data': {'category': 'Transports'}, 'expected_result': "Search results related to the 'Transports' category are displayed."}, {'scenario': 'Search with invalid category', 'description': 'Test the search functionality with an invalid category.', 'steps': ['Navigate to the search page.', "Manipulate the DOM to add an invalid option to the 'Sadaļa' dropdown or use browser developer tools.", "Select the invalid category and click the 'Meklēt' button."], 'input_data': {'category': 'InvalidCategory'}, 'expected_result': 'An error message is displayed indicating the category is not recognized.'}, {'scenario': 'Search with a specific transaction type', 'description': 'Test the search functionality with a specific transaction type selected.', 'steps': ['Navigate to the search page.', "Select a transaction type from the 'Darījuma veids' dropdown.", "Click the 'Meklēt' button."], 'input_data': {'transaction_type': 'Pārdod'}, 'expected_result': "Search results related to the 'Pārdod' transaction type are displayed."}, {'scenario': 'Search with a specific region', 'description': 'Test the search functionality with a specific region selected.', 'steps': ['Navigate to the search page.', "Select a region from the 'Pilsēta, rajons' dropdown.", "Click the 'Meklēt' button."], 'input_data': {'region': 'Rīga'}, 'expected_result': "Search results related to the 'Rīga' region are displayed."}, {'scenario': 'Search with a specific period', 'description': 'Test the search functionality with a specific period selected.', 'steps': ['Navigate to the search page.', "Select a period from the 'Meklēt par periodu' dropdown.", "Click the 'Meklēt' button."], 'input_data': {'period': 'Pēdējā nedēļā'}, 'expected_result': 'Search results from the last week are displayed.'}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Search with valid keyword', 'description': 'Test the search functionality with a valid keyword.', 'steps': ['Navigate to the search page.', "Enter a valid keyword in the 'Meklējamais vārds vai frāze' field.", "Click the 'Meklēt' button."], 'input_data': {'keyword': 'auto'}, 'expected_result': "Search results related to 'auto' are displayed."}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Search with empty keyword', 'description': 'Test the search functionality with an empty keyword.', 'steps': ['Navigate to the search page.', "Leave the 'Meklējamais vārds vai frāze' field empty.", "Click the 'Meklēt' button."], 'input_data': {'keyword': ''}, 'expected_result': 'An error message is displayed or no search results are shown.'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_2():
+    """
+    {'scenario': 'Search with special characters', 'description': 'Test the search functionality with special characters.', 'steps': ['Navigate to the search page.', "Enter special characters in the 'Meklējamais vārds vai frāze' field.", "Click the 'Meklēt' button."], 'input_data': {'keyword': '@#$%^&*()'}, 'expected_result': 'An error message is displayed or no relevant search results are shown.'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_3():
+    """
+    {'scenario': 'Search with a specific category selected', 'description': 'Test the search functionality with a specific category selected.', 'steps': ['Navigate to the search page.', "Select a category from the 'Sadaļa' dropdown.", "Click the 'Meklēt' button."], 'input_data': {'category': 'Transports'}, 'expected_result': "Search results related to the 'Transports' category are displayed."}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_4():
+    """
+    {'scenario': 'Search with invalid category', 'description': 'Test the search functionality with an invalid category.', 'steps': ['Navigate to the search page.', "Manipulate the DOM to add an invalid option to the 'Sadaļa' dropdown or use browser developer tools.", "Select the invalid category and click the 'Meklēt' button."], 'input_data': {'category': 'InvalidCategory'}, 'expected_result': 'An error message is displayed indicating the category is not recognized.'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_5():
+    """
+    {'scenario': 'Search with a specific transaction type', 'description': 'Test the search functionality with a specific transaction type selected.', 'steps': ['Navigate to the search page.', "Select a transaction type from the 'Darījuma veids' dropdown.", "Click the 'Meklēt' button."], 'input_data': {'transaction_type': 'Pārdod'}, 'expected_result': "Search results related to the 'Pārdod' transaction type are displayed."}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_6():
+    """
+    {'scenario': 'Search with a specific region', 'description': 'Test the search functionality with a specific region selected.', 'steps': ['Navigate to the search page.', "Select a region from the 'Pilsēta, rajons' dropdown.", "Click the 'Meklēt' button."], 'input_data': {'region': 'Rīga'}, 'expected_result': "Search results related to the 'Rīga' region are displayed."}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_7():
+    """
+    {'scenario': 'Search with a specific period', 'description': 'Test the search functionality with a specific period selected.', 'steps': ['Navigate to the search page.', "Select a period from the 'Meklēt par periodu' dropdown.", "Click the 'Meklēt' button."], 'input_data': {'period': 'Pēdējā nedēļā'}, 'expected_result': 'Search results from the last week are displayed.'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+    try:
+        test_scenario_2()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_2:", e)
+        
+    try:
+        test_scenario_3()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_3:", e)
+        
+    try:
+        test_scenario_4()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_4:", e)
+        
+    try:
+        test_scenario_5()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_5:", e)
+        
+    try:
+        test_scenario_6()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_6:", e)
+        
+    try:
+        test_scenario_7()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_7:", e)
+        
+{
+    "missing_requirements": []
+}
+Your test execution output:   Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 128, in <module>
+    test_search_with_empty_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 32, in test_search_with_empty_keyword
+    assert error_message in driver.page_source, "Expected error message not displayed."
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected error message not displayed.
+
+{
+    "implementation_errors": [
+        {
+            "error": "AssertionError in test_search_with_empty_keyword",
+            "description": "The test assumes an error message 'Please enter a keyword' will be displayed when searching with an empty keyword, but no such message is defined in the HTML or handled in the JavaScript.",
+            "suggestion": "Check if the website actually displays an error message for empty input. If it does, ensure the correct text is used in the test. If not, modify the test to check for the correct behavior, such as no change in the page or a specific element not being present."
+        },
+        {
+            "error": "Incorrect assumption in test_search_with_special_characters",
+            "description": "The test assumes that searching with special characters will result in 'No relevant results', but there is no evidence in the HTML that such a message is displayed for this case.",
+            "suggestion": "Verify how the website handles searches with special characters and adjust the test to check for the actual behavior. If the site does not display a specific message, consider checking for the absence of search results or other indicators of no results."
+        },
+        {
+            "error": "Incorrect assumption in test_search_with_invalid_category",
+            "description": "The test manipulates the DOM to add an invalid category and assumes an error message 'Category not recognized'. However, there is no indication that the website handles or displays such an error.",
+            "suggestion": "Ensure the website has functionality to handle invalid categories and displays an error message. If not, the test should be adjusted to reflect the actual behavior, such as checking that no results are returned or the page remains unchanged."
+        },
+        {
+            "error": "Incorrect text check in test_search_with_specific_period",
+            "description": "The test checks for the string 'last week' in the page source after selecting 'Pēdējā nedēļā' from a dropdown. However, the actual text related to the period might not be 'last week' in English.",
+            "suggestion": "Verify the actual text displayed or the result structure when a specific period is selected and update the test to check for the correct content or result indication."
+        },
+        {
+            "error": "Potential localization issue",
+            "description": "The tests use English phrases like 'Please enter a keyword', 'No relevant results', 'Category not recognized', and 'last week', but the website appears to be in Latvian.",
+            "suggestion": "Localize the strings used in the assertions to match the website's language, or ensure the website supports and displays these messages in English when appropriate."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 126, in <module>
+    test_search_with_valid_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 17, in test_search_with_valid_keyword
+    search_button.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type="submit" name="btn" id="sbtn" border="1" value="Meklēt" class="btn" style="width:200px;"> is not clickable at point (506, 262). Other element would receive the click: <div id="cmp_9" style="padding:2px;cursor:default;selectablez=false;" onmouseover="cmp_over(9)" onmouseout="cmp_out(9)" onclick="show_s_dv('none',1);">...</div>
+  (Session info: chrome=125.0.6422.60)
+Stacktrace:
+0   chromedriver                        0x00000001012664a0 chromedriver + 4301984
+1   chromedriver                        0x000000010125ede8 chromedriver + 4271592
+2   chromedriver                        0x0000000100e9019c chromedriver + 278940
+3   chromedriver                        0x0000000100ed7d48 chromedriver + 572744
+4   chromedriver                        0x0000000100ed62ec chromedriver + 565996
+5   chromedriver                        0x0000000100ed447c chromedriver + 558204
+6   chromedriver                        0x0000000100ed39cc chromedriver + 555468
+7   chromedriver                        0x0000000100ec8e24 chromedriver + 511524
+8   chromedriver                        0x0000000100ec885c chromedriver + 510044
+9   chromedriver                        0x0000000100f0ac5c chromedriver + 781404
+10  chromedriver                        0x0000000100ec7004 chromedriver + 503812
+11  chromedriver                        0x0000000100ec79ec chromedriver + 506348
+12  chromedriver                        0x000000010122e4e8 chromedriver + 4072680
+13  chromedriver                        0x0000000101232f94 chromedriver + 4091796
+14  chromedriver                        0x000000010121572c chromedriver + 3970860
+15  chromedriver                        0x000000010123387c chromedriver + 4094076
+16  chromedriver                        0x00000001012086ac chromedriver + 3917484
+17  chromedriver                        0x0000000101250ae0 chromedriver + 4213472
+18  chromedriver                        0x0000000101250c5c chromedriver + 4213852
+19  chromedriver                        0x000000010125e9e0 chromedriver + 4270560
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 1 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 144, in <module>
+    test_search_with_invalid_category()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 82, in test_search_with_invalid_category
+    driver.execute_script("arguments[0].appendChild(new Option('InvalidCategory', 'invalid'))", category_dropdown)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 298, in execute
+    data = utils.dump_json(params)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/utils.py", line 24, in dump_json
+    return json.dumps(json_struct)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Select is not JSON serializable
+
+Your test execution output in 2 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 144, in <module>
+    test_search_with_invalid_category()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 82, in test_search_with_invalid_category
+    driver.execute_script("var select = arguments[0]; var option = document.createElement('option'); option.text = 'InvalidCategory'; option.value = 'invalid'; select.add(option);", category_dropdown)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 407, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 298, in execute
+    data = utils.dump_json(params)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/utils.py", line 24, in dump_json
+    return json.dumps(json_struct)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Select is not JSON serializable
+
+Your test execution output in 3 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 140, in <module>
+    test_search_with_valid_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 19, in test_search_with_valid_keyword
+    search_button.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type="submit" name="btn" id="sbtn" border="1" value="Meklēt" class="btn" style="width:200px;"> is not clickable at point (506, 262). Other element would receive the click: <div id="cmp_9" style="padding:2px;cursor:default;selectablez=false;" onmouseover="cmp_over(9)" onmouseout="cmp_out(9)" onclick="show_s_dv('none',1);">...</div>
+  (Session info: chrome=125.0.6422.60)
+Stacktrace:
+0   chromedriver                        0x0000000104e424a0 chromedriver + 4301984
+1   chromedriver                        0x0000000104e3ade8 chromedriver + 4271592
+2   chromedriver                        0x0000000104a6c19c chromedriver + 278940
+3   chromedriver                        0x0000000104ab3d48 chromedriver + 572744
+4   chromedriver                        0x0000000104ab22ec chromedriver + 565996
+5   chromedriver                        0x0000000104ab047c chromedriver + 558204
+6   chromedriver                        0x0000000104aaf9cc chromedriver + 555468
+7   chromedriver                        0x0000000104aa4e24 chromedriver + 511524
+8   chromedriver                        0x0000000104aa485c chromedriver + 510044
+9   chromedriver                        0x0000000104ae6c5c chromedriver + 781404
+10  chromedriver                        0x0000000104aa3004 chromedriver + 503812
+11  chromedriver                        0x0000000104aa39ec chromedriver + 506348
+12  chromedriver                        0x0000000104e0a4e8 chromedriver + 4072680
+13  chromedriver                        0x0000000104e0ef94 chromedriver + 4091796
+14  chromedriver                        0x0000000104df172c chromedriver + 3970860
+15  chromedriver                        0x0000000104e0f87c chromedriver + 4094076
+16  chromedriver                        0x0000000104de46ac chromedriver + 3917484
+17  chromedriver                        0x0000000104e2cae0 chromedriver + 4213472
+18  chromedriver                        0x0000000104e2cc5c chromedriver + 4213852
+19  chromedriver                        0x0000000104e3a9e0 chromedriver + 4270560
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 4 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 141, in <module>
+    test_search_with_valid_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 21, in test_search_with_valid_keyword
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'msga2-o')))  # Assuming 'msga2-o' is a class for search results
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001031464a0 chromedriver + 4301984
+1   chromedriver                        0x000000010313ede8 chromedriver + 4271592
+2   chromedriver                        0x0000000102d7019c chromedriver + 278940
+3   chromedriver                        0x0000000102db22c4 chromedriver + 549572
+4   chromedriver                        0x0000000102deac5c chromedriver + 781404
+5   chromedriver                        0x0000000102da7004 chromedriver + 503812
+6   chromedriver                        0x0000000102da79ec chromedriver + 506348
+7   chromedriver                        0x000000010310e4e8 chromedriver + 4072680
+8   chromedriver                        0x0000000103112f94 chromedriver + 4091796
+9   chromedriver                        0x00000001030f572c chromedriver + 3970860
+10  chromedriver                        0x000000010311387c chromedriver + 4094076
+11  chromedriver                        0x00000001030e86ac chromedriver + 3917484
+12  chromedriver                        0x0000000103130ae0 chromedriver + 4213472
+13  chromedriver                        0x0000000103130c5c chromedriver + 4213852
+14  chromedriver                        0x000000010313e9e0 chromedriver + 4270560
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Execution time: 464.1024389266968 seconds
+
+GPT3.5 Prompt tokens: 65463, $0.0327315
+GPT3.5 Response tokens: 10779, $0.0161685
+
+GPT4 Prompt time: 65463, $0.65463
+GPT4 Response tokens: 10779, $0.32337
+

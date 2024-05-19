@@ -1,0 +1,392 @@
+[{'scenario': 'Submit form with all valid inputs', 'steps': ['Navigate to the Practice Form page', "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe@example.com' in the Email field", "Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1995' as Date of Birth", "Enter 'Maths' in the Subjects field", "Select 'Sports' in Hobbies", 'Upload a valid picture', "Enter '123 Main St, Anytown, USA' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", 'Click the Submit button'], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe@example.com', 'gender': 'Male', 'userNumber': '1234567890', 'dateOfBirth': '15 May 1995', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, Anytown, USA', 'state': 'NCR', 'city': 'Delhi'}}, {'scenario': 'Submit form with missing required fields', 'steps': ['Navigate to the Practice Form page', 'Leave the First Name field empty', "Enter 'Doe' in the Last Name field", 'Leave the Email field empty', 'Do not select Gender', 'Leave the Mobile field empty', 'Do not select Date of Birth', 'Leave the Subjects field empty', 'Do not select any Hobbies', 'Do not upload a picture', 'Leave the Current Address field empty', 'Do not select State and City', 'Click the Submit button'], 'input_data': {'firstName': '', 'lastName': 'Doe', 'userEmail': '', 'gender': '', 'userNumber': '', 'dateOfBirth': '', 'subjects': '', 'hobbies': [], 'uploadPicture': '', 'currentAddress': '', 'state': '', 'city': ''}, 'expected_result': 'Form should display errors for missing required fields'}, {'scenario': 'Submit form with invalid email format', 'steps': ['Navigate to the Practice Form page', "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe' in the Email field (invalid format)", "Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1995' as Date of Birth", "Enter 'Maths' in the Subjects field", "Select 'Sports' in Hobbies", 'Upload a valid picture', "Enter '123 Main St, Anytown, USA' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", 'Click the Submit button'], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe', 'gender': 'Male', 'userNumber': '1234567890', 'dateOfBirth': '15 May 1995', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, Anytown, USA', 'state': 'NCR', 'city': 'Delhi'}, 'expected_result': 'Form should display an error for invalid email format'}, {'scenario': 'Submit form with invalid mobile number', 'steps': ['Navigate to the Practice Form page', "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe@example.com' in the Email field", "Select 'Male' as Gender", "Enter '12345' in the Mobile field (less than 10 digits)", "Select '15 May 1995' as Date of Birth", "Enter 'Maths' in the Subjects field", "Select 'Sports' in Hobbies", 'Upload a valid picture', "Enter '123 Main St, Anytown, USA' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", 'Click the Submit button'], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe@example.com', 'gender': 'Male', 'userNumber': '12345', 'dateOfBirth': '15 May 1995', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, Anytown, USA', 'state': 'NCR', 'city': 'Delhi'}, 'expected_result': 'Form should display an error for invalid mobile number'}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Submit form with all valid inputs', 'steps': ['Navigate to the Practice Form page', "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe@example.com' in the Email field", "Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1995' as Date of Birth", "Enter 'Maths' in the Subjects field", "Select 'Sports' in Hobbies", 'Upload a valid picture', "Enter '123 Main St, Anytown, USA' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", 'Click the Submit button'], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe@example.com', 'gender': 'Male', 'userNumber': '1234567890', 'dateOfBirth': '15 May 1995', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, Anytown, USA', 'state': 'NCR', 'city': 'Delhi'}}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Submit form with missing required fields', 'steps': ['Navigate to the Practice Form page', 'Leave the First Name field empty', "Enter 'Doe' in the Last Name field", 'Leave the Email field empty', 'Do not select Gender', 'Leave the Mobile field empty', 'Do not select Date of Birth', 'Leave the Subjects field empty', 'Do not select any Hobbies', 'Do not upload a picture', 'Leave the Current Address field empty', 'Do not select State and City', 'Click the Submit button'], 'input_data': {'firstName': '', 'lastName': 'Doe', 'userEmail': '', 'gender': '', 'userNumber': '', 'dateOfBirth': '', 'subjects': '', 'hobbies': [], 'uploadPicture': '', 'currentAddress': '', 'state': '', 'city': ''}, 'expected_result': 'Form should display errors for missing required fields'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_2():
+    """
+    {'scenario': 'Submit form with invalid email format', 'steps': ['Navigate to the Practice Form page', "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe' in the Email field (invalid format)", "Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1995' as Date of Birth", "Enter 'Maths' in the Subjects field", "Select 'Sports' in Hobbies", 'Upload a valid picture', "Enter '123 Main St, Anytown, USA' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", 'Click the Submit button'], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe', 'gender': 'Male', 'userNumber': '1234567890', 'dateOfBirth': '15 May 1995', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, Anytown, USA', 'state': 'NCR', 'city': 'Delhi'}, 'expected_result': 'Form should display an error for invalid email format'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_3():
+    """
+    {'scenario': 'Submit form with invalid mobile number', 'steps': ['Navigate to the Practice Form page', "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe@example.com' in the Email field", "Select 'Male' as Gender", "Enter '12345' in the Mobile field (less than 10 digits)", "Select '15 May 1995' as Date of Birth", "Enter 'Maths' in the Subjects field", "Select 'Sports' in Hobbies", 'Upload a valid picture', "Enter '123 Main St, Anytown, USA' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", 'Click the Submit button'], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe@example.com', 'gender': 'Male', 'userNumber': '12345', 'dateOfBirth': '15 May 1995', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, Anytown, USA', 'state': 'NCR', 'city': 'Delhi'}, 'expected_result': 'Form should display an error for invalid mobile number'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+    try:
+        test_scenario_2()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_2:", e)
+        
+    try:
+        test_scenario_3()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_3:", e)
+        
+{
+    "missing_requirements": [
+        {
+            "scenario": "Submit form with missing required fields",
+            "missing_steps": [
+                "Leave the First Name field empty",
+                "Leave the Email field empty",
+                "Do not select Gender",
+                "Leave the Mobile field empty",
+                "Do not select Date of Birth",
+                "Leave the Subjects field empty",
+                "Do not select any Hobbies",
+                "Do not upload a picture",
+                "Leave the Current Address field empty",
+                "Do not select State and City"
+            ]
+        },
+        {
+            "scenario": "Submit form with all valid inputs",
+            "missing_steps": [
+                "Select '15 May 1995' as Date of Birth"
+            ]
+        }
+    ]
+}
+You're missing this requirements in 0 run {'missing_requirements': [{'scenario': 'Submit form with missing required fields', 'missing_steps': ['Leave the First Name field empty', 'Leave the Email field empty', 'Do not select Gender', 'Leave the Mobile field empty', 'Do not select Date of Birth', 'Leave the Subjects field empty', 'Do not select any Hobbies', 'Do not upload a picture', 'Leave the Current Address field empty', 'Do not select State and City']}, {'scenario': 'Submit form with all valid inputs', 'missing_steps': ["Select '15 May 1995' as Date of Birth"]}]}
+{
+    "missing_requirements": [
+        {
+            "scenario": "Submit form with missing required fields",
+            "missing_steps": [
+                "Navigate to the Practice Form page",
+                "Leave the First Name field empty",
+                "Enter 'Doe' in the Last Name field",
+                "Leave the Email field empty",
+                "Do not select Gender",
+                "Leave the Mobile field empty",
+                "Do not select Date of Birth",
+                "Leave the Subjects field empty",
+                "Do not select any Hobbies",
+                "Do not upload a picture",
+                "Leave the Current Address field empty",
+                "Do not select State and City",
+                "Click the Submit button"
+            ],
+            "note": "The test script for this scenario only clicks the submit button without setting any fields, which does not fully test the behavior when individual fields are left empty or not selected."
+        },
+        {
+            "scenario": "Submit form with invalid email format",
+            "missing_steps": [
+                "Navigate to the Practice Form page",
+                "Enter 'John' in the First Name field",
+                "Enter 'Doe' in the Last Name field",
+                "Select 'Male' as Gender",
+                "Enter '1234567890' in the Mobile field",
+                "Select '15 May 1995' as Date of Birth",
+                "Enter 'Maths' in the Subjects field",
+                "Select 'Sports' in Hobbies",
+                "Upload a valid picture",
+                "Enter '123 Main St, Anytown, USA' in the Current Address field",
+                "Select 'NCR' as State and 'Delhi' as City",
+                "Click the Submit button"
+            ],
+            "note": "The test script for this scenario does not fully simulate the form submission process as described in the requirements, missing steps that involve setting other fields and clicking the submit button after entering all data."
+        },
+        {
+            "scenario": "Submit form with invalid mobile number",
+            "missing_steps": [
+                "Navigate to the Practice Form page",
+                "Enter 'John' in the First Name field",
+                "Enter 'Doe' in the Last Name field",
+                "Enter 'john.doe@example.com' in the Email field",
+                "Select 'Male' as Gender",
+                "Select '15 May 1995' as Date of Birth",
+                "Enter 'Maths' in the Subjects field",
+                "Select 'Sports' in Hobbies",
+                "Upload a valid picture",
+                "Enter '123 Main St, Anytown, USA' in the Current Address field",
+                "Select 'NCR' as State and 'Delhi' as City",
+                "Click the Submit button"
+            ],
+            "note": "The test script for this scenario does not fully simulate the form submission process as described in the requirements, missing steps that involve setting other fields and clicking the submit button after entering all data."
+        }
+    ]
+}
+You're missing this requirements in 1 run {'missing_requirements': [{'scenario': 'Submit form with missing required fields', 'missing_steps': ['Navigate to the Practice Form page', 'Leave the First Name field empty', "Enter 'Doe' in the Last Name field", 'Leave the Email field empty', 'Do not select Gender', 'Leave the Mobile field empty', 'Do not select Date of Birth', 'Leave the Subjects field empty', 'Do not select any Hobbies', 'Do not upload a picture', 'Leave the Current Address field empty', 'Do not select State and City', 'Click the Submit button'], 'note': 'The test script for this scenario only clicks the submit button without setting any fields, which does not fully test the behavior when individual fields are left empty or not selected.'}, {'scenario': 'Submit form with invalid email format', 'missing_steps': ['Navigate to the Practice Form page', "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1995' as Date of Birth", "Enter 'Maths' in the Subjects field", "Select 'Sports' in Hobbies", 'Upload a valid picture', "Enter '123 Main St, Anytown, USA' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", 'Click the Submit button'], 'note': 'The test script for this scenario does not fully simulate the form submission process as described in the requirements, missing steps that involve setting other fields and clicking the submit button after entering all data.'}, {'scenario': 'Submit form with invalid mobile number', 'missing_steps': ['Navigate to the Practice Form page', "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe@example.com' in the Email field", "Select 'Male' as Gender", "Select '15 May 1995' as Date of Birth", "Enter 'Maths' in the Subjects field", "Select 'Sports' in Hobbies", 'Upload a valid picture', "Enter '123 Main St, Anytown, USA' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", 'Click the Submit button'], 'note': 'The test script for this scenario does not fully simulate the form submission process as described in the requirements, missing steps that involve setting other fields and clicking the submit button after entering all data.'}]}
+Your test execution output:   Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_req_fix_1.py", line 112, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_req_fix_1.py", line 31, in test_scenario_0
+    Select(driver.find_element(By.ID, 'state')).select_by_visible_text('NCR')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 39, in __init__
+    raise UnexpectedTagNameException(f"Select only works on <select> elements, not on {webelement.tag_name}")
+selenium.common.exceptions.UnexpectedTagNameException: Message: Select only works on <select> elements, not on div
+
+
+{
+    "implementation_errors": [
+        {
+            "error": "UnexpectedTagNameException",
+            "description": "The 'Select' class is used to interact with <select> elements, but the element with ID 'state' is a <div>.",
+            "location": "test_scenario_0()",
+            "suggested_fix": "Instead of using 'Select', use a combination of clicks and other methods to interact with the custom dropdown. For example, click the dropdown to open it, then click the desired option."
+        },
+        {
+            "error": "Incorrect error message assertion",
+            "description": "The assertion message for an invalid email format is incorrect. The actual error message provided by the browser does not contain the phrase 'Please include an '@' in the email address'.",
+            "location": "test_scenario_2()",
+            "suggested_fix": "Correct the assertion to match the actual validation message provided by the browser for an invalid email format."
+        },
+        {
+            "error": "Incorrect error message assertion",
+            "description": "The assertion message for an invalid mobile number is incorrect. The actual error message provided by the browser does not contain the phrase 'Please lengthen this text to 10 characters or more'.",
+            "location": "test_scenario_3()",
+            "suggested_fix": "Correct the assertion to match the actual validation message provided by the browser for an invalid mobile number."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 118, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 22, in test_scenario_0
+    driver.find_element(By.ID, 'dateOfBirthInput').click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type="text" id="dateOfBirthInput" class="form-control" value="15 May 2024"> is not clickable at point (563, 494). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="809" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" style="border: 0px; vertical-align: bottom;" data-google-container-id="1"></iframe>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x00000001048de940 chromedriver + 4368704
+1   chromedriver                        0x00000001048d6dd4 chromedriver + 4337108
+2   chromedriver                        0x00000001044fac04 chromedriver + 289796
+3   chromedriver                        0x000000010454288c chromedriver + 583820
+4   chromedriver                        0x0000000104540e20 chromedriver + 577056
+5   chromedriver                        0x000000010453efac chromedriver + 569260
+6   chromedriver                        0x000000010453e13c chromedriver + 565564
+7   chromedriver                        0x0000000104533940 chromedriver + 522560
+8   chromedriver                        0x0000000104533368 chromedriver + 521064
+9   chromedriver                        0x00000001045755ec chromedriver + 792044
+10  chromedriver                        0x0000000104531ab4 chromedriver + 514740
+11  chromedriver                        0x000000010453250c chromedriver + 517388
+12  chromedriver                        0x00000001048a2e5c chromedriver + 4124252
+13  chromedriver                        0x00000001048a7c4c chromedriver + 4144204
+14  chromedriver                        0x0000000104888824 chromedriver + 4016164
+15  chromedriver                        0x00000001048a857c chromedriver + 4146556
+16  chromedriver                        0x000000010487a2d8 chromedriver + 3957464
+17  chromedriver                        0x00000001048c7ec4 chromedriver + 4275908
+18  chromedriver                        0x00000001048c8040 chromedriver + 4276288
+19  chromedriver                        0x00000001048d6a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 1 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 112, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 22, in test_scenario_0
+    driver.find_element(By.ID, 'dateOfBirthInput').click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type="text" id="dateOfBirthInput" class="form-control" value="15 May 2024"> is not clickable at point (563, 494). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="809" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" style="border: 0px; vertical-align: bottom;" data-google-container-id="1"></iframe>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000101426940 chromedriver + 4368704
+1   chromedriver                        0x000000010141edd4 chromedriver + 4337108
+2   chromedriver                        0x0000000101042c04 chromedriver + 289796
+3   chromedriver                        0x000000010108a88c chromedriver + 583820
+4   chromedriver                        0x0000000101088e20 chromedriver + 577056
+5   chromedriver                        0x0000000101086fac chromedriver + 569260
+6   chromedriver                        0x000000010108613c chromedriver + 565564
+7   chromedriver                        0x000000010107b940 chromedriver + 522560
+8   chromedriver                        0x000000010107b368 chromedriver + 521064
+9   chromedriver                        0x00000001010bd5ec chromedriver + 792044
+10  chromedriver                        0x0000000101079ab4 chromedriver + 514740
+11  chromedriver                        0x000000010107a50c chromedriver + 517388
+12  chromedriver                        0x00000001013eae5c chromedriver + 4124252
+13  chromedriver                        0x00000001013efc4c chromedriver + 4144204
+14  chromedriver                        0x00000001013d0824 chromedriver + 4016164
+15  chromedriver                        0x00000001013f057c chromedriver + 4146556
+16  chromedriver                        0x00000001013c22d8 chromedriver + 3957464
+17  chromedriver                        0x000000010140fec4 chromedriver + 4275908
+18  chromedriver                        0x0000000101410040 chromedriver + 4276288
+19  chromedriver                        0x000000010141ea34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 2 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 105, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 23, in test_scenario_0
+    driver.find_element(By.XPATH, '//label[text()="Sports"]').click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <label title="" for="hobbies-checkbox-1" class="custom-control-label">...</label> is not clickable at point (510, 502). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="809" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" style="border: 0px; vertical-align: bottom;" data-google-container-id="1"></iframe>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000101362940 chromedriver + 4368704
+1   chromedriver                        0x000000010135add4 chromedriver + 4337108
+2   chromedriver                        0x0000000100f7ec04 chromedriver + 289796
+3   chromedriver                        0x0000000100fc688c chromedriver + 583820
+4   chromedriver                        0x0000000100fc4e20 chromedriver + 577056
+5   chromedriver                        0x0000000100fc2fac chromedriver + 569260
+6   chromedriver                        0x0000000100fc213c chromedriver + 565564
+7   chromedriver                        0x0000000100fb7940 chromedriver + 522560
+8   chromedriver                        0x0000000100fb7368 chromedriver + 521064
+9   chromedriver                        0x0000000100ff95ec chromedriver + 792044
+10  chromedriver                        0x0000000100fb5ab4 chromedriver + 514740
+11  chromedriver                        0x0000000100fb650c chromedriver + 517388
+12  chromedriver                        0x0000000101326e5c chromedriver + 4124252
+13  chromedriver                        0x000000010132bc4c chromedriver + 4144204
+14  chromedriver                        0x000000010130c824 chromedriver + 4016164
+15  chromedriver                        0x000000010132c57c chromedriver + 4146556
+16  chromedriver                        0x00000001012fe2d8 chromedriver + 3957464
+17  chromedriver                        0x000000010134bec4 chromedriver + 4275908
+18  chromedriver                        0x000000010134c040 chromedriver + 4276288
+19  chromedriver                        0x000000010135aa34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 3 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 105, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 23, in test_scenario_0
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//label[text()="Sports"]'))).click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <label title="" for="hobbies-checkbox-1" class="custom-control-label">...</label> is not clickable at point (510, 558). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" style="border: 0px; vertical-align: bottom;" data-google-container-id="1"></iframe>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x00000001046ae940 chromedriver + 4368704
+1   chromedriver                        0x00000001046a6dd4 chromedriver + 4337108
+2   chromedriver                        0x00000001042cac04 chromedriver + 289796
+3   chromedriver                        0x000000010431288c chromedriver + 583820
+4   chromedriver                        0x0000000104310e20 chromedriver + 577056
+5   chromedriver                        0x000000010430efac chromedriver + 569260
+6   chromedriver                        0x000000010430e13c chromedriver + 565564
+7   chromedriver                        0x0000000104303940 chromedriver + 522560
+8   chromedriver                        0x0000000104303368 chromedriver + 521064
+9   chromedriver                        0x00000001043455ec chromedriver + 792044
+10  chromedriver                        0x0000000104301ab4 chromedriver + 514740
+11  chromedriver                        0x000000010430250c chromedriver + 517388
+12  chromedriver                        0x0000000104672e5c chromedriver + 4124252
+13  chromedriver                        0x0000000104677c4c chromedriver + 4144204
+14  chromedriver                        0x0000000104658824 chromedriver + 4016164
+15  chromedriver                        0x000000010467857c chromedriver + 4146556
+16  chromedriver                        0x000000010464a2d8 chromedriver + 3957464
+17  chromedriver                        0x0000000104697ec4 chromedriver + 4275908
+18  chromedriver                        0x0000000104698040 chromedriver + 4276288
+19  chromedriver                        0x00000001046a6a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 4 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 105, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 23, in test_scenario_0
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//label[text()="Sports"]'))).click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <label title="" for="hobbies-checkbox-1" class="custom-control-label">...</label> is not clickable at point (510, 555). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="809" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" style="border: 0px; vertical-align: bottom;" data-google-container-id="1"></iframe>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x00000001045ce940 chromedriver + 4368704
+1   chromedriver                        0x00000001045c6dd4 chromedriver + 4337108
+2   chromedriver                        0x00000001041eac04 chromedriver + 289796
+3   chromedriver                        0x000000010423288c chromedriver + 583820
+4   chromedriver                        0x0000000104230e20 chromedriver + 577056
+5   chromedriver                        0x000000010422efac chromedriver + 569260
+6   chromedriver                        0x000000010422e13c chromedriver + 565564
+7   chromedriver                        0x0000000104223940 chromedriver + 522560
+8   chromedriver                        0x0000000104223368 chromedriver + 521064
+9   chromedriver                        0x00000001042655ec chromedriver + 792044
+10  chromedriver                        0x0000000104221ab4 chromedriver + 514740
+11  chromedriver                        0x000000010422250c chromedriver + 517388
+12  chromedriver                        0x0000000104592e5c chromedriver + 4124252
+13  chromedriver                        0x0000000104597c4c chromedriver + 4144204
+14  chromedriver                        0x0000000104578824 chromedriver + 4016164
+15  chromedriver                        0x000000010459857c chromedriver + 4146556
+16  chromedriver                        0x000000010456a2d8 chromedriver + 3957464
+17  chromedriver                        0x00000001045b7ec4 chromedriver + 4275908
+18  chromedriver                        0x00000001045b8040 chromedriver + 4276288
+19  chromedriver                        0x00000001045c6a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Execution time: 857.4023640155792 seconds
+
+GPT3.5 Prompt tokens: 53724, $0.026862
+GPT3.5 Response tokens: 14394, $0.021591
+
+GPT4 Prompt time: 53724, $0.53724
+GPT4 Response tokens: 14394, $0.43182000000000004
+

@@ -1,0 +1,567 @@
+[{'scenario': 'Submit form with all valid inputs', 'steps': ["Navigate to the 'Practice Form' page", "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe@example.com' in the Email field", "Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1994' as Date of Birth", "Type 'Maths' in the Subjects field and select it", "Select 'Sports' in Hobbies", 'Upload a valid image file', "Enter '123 Main St, City, Country' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", "Click on the 'Submit' button"], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe@example.com', 'gender': 'Male', 'userNumber': '1234567890', 'dateOfBirth': '15 May 1994', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, City, Country', 'state': 'NCR', 'city': 'Delhi'}}, {'scenario': 'Submit form with missing required fields', 'steps': ["Navigate to the 'Practice Form' page", 'Leave the First Name field empty', "Enter 'Doe' in the Last Name field", 'Leave the Email field empty', 'Do not select any Gender', 'Leave the Mobile field empty', 'Do not select Date of Birth', 'Leave Subjects field empty', 'Do not select any Hobbies', 'Do not upload any image file', 'Leave the Current Address field empty', 'Do not select State and City', "Click on the 'Submit' button"], 'input_data': {'firstName': '', 'lastName': 'Doe', 'userEmail': '', 'gender': '', 'userNumber': '', 'dateOfBirth': '', 'subjects': '', 'hobbies': [], 'uploadPicture': '', 'currentAddress': '', 'state': '', 'city': ''}}, {'scenario': 'Submit form with invalid email format', 'steps': ["Navigate to the 'Practice Form' page", "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe' in the Email field (invalid format)", "Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1994' as Date of Birth", "Type 'Maths' in the Subjects field and select it", "Select 'Sports' in Hobbies", 'Upload a valid image file', "Enter '123 Main St, City, Country' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", "Click on the 'Submit' button"], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe', 'gender': 'Male', 'userNumber': '1234567890', 'dateOfBirth': '15 May 1994', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, City, Country', 'state': 'NCR', 'city': 'Delhi'}}, {'scenario': 'Submit form with invalid mobile number', 'steps': ["Navigate to the 'Practice Form' page", "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe@example.com' in the Email field", "Select 'Male' as Gender", "Enter '12345' in the Mobile field (invalid number)", "Select '15 May 1994' as Date of Birth", "Type 'Maths' in the Subjects field and select it", "Select 'Sports' in Hobbies", 'Upload a valid image file', "Enter '123 Main St, City, Country' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", "Click on the 'Submit' button"], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe@example.com', 'gender': 'Male', 'userNumber': '12345', 'dateOfBirth': '15 May 1994', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, City, Country', 'state': 'NCR', 'city': 'Delhi'}}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Submit form with all valid inputs', 'steps': ["Navigate to the 'Practice Form' page", "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe@example.com' in the Email field", "Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1994' as Date of Birth", "Type 'Maths' in the Subjects field and select it", "Select 'Sports' in Hobbies", 'Upload a valid image file', "Enter '123 Main St, City, Country' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", "Click on the 'Submit' button"], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe@example.com', 'gender': 'Male', 'userNumber': '1234567890', 'dateOfBirth': '15 May 1994', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, City, Country', 'state': 'NCR', 'city': 'Delhi'}}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Submit form with missing required fields', 'steps': ["Navigate to the 'Practice Form' page", 'Leave the First Name field empty', "Enter 'Doe' in the Last Name field", 'Leave the Email field empty', 'Do not select any Gender', 'Leave the Mobile field empty', 'Do not select Date of Birth', 'Leave Subjects field empty', 'Do not select any Hobbies', 'Do not upload any image file', 'Leave the Current Address field empty', 'Do not select State and City', "Click on the 'Submit' button"], 'input_data': {'firstName': '', 'lastName': 'Doe', 'userEmail': '', 'gender': '', 'userNumber': '', 'dateOfBirth': '', 'subjects': '', 'hobbies': [], 'uploadPicture': '', 'currentAddress': '', 'state': '', 'city': ''}}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_2():
+    """
+    {'scenario': 'Submit form with invalid email format', 'steps': ["Navigate to the 'Practice Form' page", "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe' in the Email field (invalid format)", "Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1994' as Date of Birth", "Type 'Maths' in the Subjects field and select it", "Select 'Sports' in Hobbies", 'Upload a valid image file', "Enter '123 Main St, City, Country' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", "Click on the 'Submit' button"], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe', 'gender': 'Male', 'userNumber': '1234567890', 'dateOfBirth': '15 May 1994', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, City, Country', 'state': 'NCR', 'city': 'Delhi'}}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_3():
+    """
+    {'scenario': 'Submit form with invalid mobile number', 'steps': ["Navigate to the 'Practice Form' page", "Enter 'John' in the First Name field", "Enter 'Doe' in the Last Name field", "Enter 'john.doe@example.com' in the Email field", "Select 'Male' as Gender", "Enter '12345' in the Mobile field (invalid number)", "Select '15 May 1994' as Date of Birth", "Type 'Maths' in the Subjects field and select it", "Select 'Sports' in Hobbies", 'Upload a valid image file', "Enter '123 Main St, City, Country' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City", "Click on the 'Submit' button"], 'input_data': {'firstName': 'John', 'lastName': 'Doe', 'userEmail': 'john.doe@example.com', 'gender': 'Male', 'userNumber': '12345', 'dateOfBirth': '15 May 1994', 'subjects': 'Maths', 'hobbies': ['Sports'], 'uploadPicture': '/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/Documents/image.png', 'currentAddress': '123 Main St, City, Country', 'state': 'NCR', 'city': 'Delhi'}}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+    try:
+        test_scenario_2()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_2:", e)
+        
+    try:
+        test_scenario_3()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_3:", e)
+        
+{
+    "missing_requirements": [
+        {
+            "scenario": "Submit form with all valid inputs",
+            "missing_steps": [
+                "Select '15 May 1994' as Date of Birth - Incorrect date format handling",
+                "Select 'NCR' as State and 'Delhi' as City - Incorrect element selection method for dropdowns"
+            ]
+        },
+        {
+            "scenario": "Submit form with missing required fields",
+            "missing_steps": [
+                "Leave the First Name field empty",
+                "Leave the Email field empty",
+                "Do not select any Gender",
+                "Leave the Mobile field empty",
+                "Do not select Date of Birth",
+                "Leave Subjects field empty",
+                "Do not select any Hobbies",
+                "Do not upload any image file",
+                "Leave the Current Address field empty",
+                "Do not select State and City"
+            ]
+        },
+        {
+            "scenario": "Submit form with invalid email format",
+            "missing_steps": [
+                "Select 'Male' as Gender",
+                "Enter '1234567890' in the Mobile field",
+                "Select '15 May 1994' as Date of Birth",
+                "Type 'Maths' in the Subjects field and select it",
+                "Select 'Sports' in Hobbies",
+                "Upload a valid image file",
+                "Enter '123 Main St, City, Country' in the Current Address field",
+                "Select 'NCR' as State and 'Delhi' as City"
+            ]
+        },
+        {
+            "scenario": "Submit form with invalid mobile number",
+            "missing_steps": [
+                "Select 'Male' as Gender",
+                "Select '15 May 1994' as Date of Birth",
+                "Type 'Maths' in the Subjects field and select it",
+                "Select 'Sports' in Hobbies",
+                "Upload a valid image file",
+                "Enter '123 Main St, City, Country' in the Current Address field",
+                "Select 'NCR' as State and 'Delhi' as City"
+            ]
+        }
+    ]
+}
+You're missing this requirements in 0 run {'missing_requirements': [{'scenario': 'Submit form with all valid inputs', 'missing_steps': ["Select '15 May 1994' as Date of Birth - Incorrect date format handling", "Select 'NCR' as State and 'Delhi' as City - Incorrect element selection method for dropdowns"]}, {'scenario': 'Submit form with missing required fields', 'missing_steps': ['Leave the First Name field empty', 'Leave the Email field empty', 'Do not select any Gender', 'Leave the Mobile field empty', 'Do not select Date of Birth', 'Leave Subjects field empty', 'Do not select any Hobbies', 'Do not upload any image file', 'Leave the Current Address field empty', 'Do not select State and City']}, {'scenario': 'Submit form with invalid email format', 'missing_steps': ["Select 'Male' as Gender", "Enter '1234567890' in the Mobile field", "Select '15 May 1994' as Date of Birth", "Type 'Maths' in the Subjects field and select it", "Select 'Sports' in Hobbies", 'Upload a valid image file', "Enter '123 Main St, City, Country' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City"]}, {'scenario': 'Submit form with invalid mobile number', 'missing_steps': ["Select 'Male' as Gender", "Select '15 May 1994' as Date of Birth", "Type 'Maths' in the Subjects field and select it", "Select 'Sports' in Hobbies", 'Upload a valid image file', "Enter '123 Main St, City, Country' in the Current Address field", "Select 'NCR' as State and 'Delhi' as City"]}]}
+{
+    "missing_requirements": [
+        {
+            "scenario": "Submit form with missing required fields",
+            "missing_steps": [
+                "Leave the First Name field empty",
+                "Leave the Email field empty",
+                "Do not select any Gender",
+                "Leave the Mobile field empty",
+                "Do not select Date of Birth",
+                "Leave Subjects field empty",
+                "Do not select any Hobbies",
+                "Do not upload any image file",
+                "Leave the Current Address field empty",
+                "Do not select State and City"
+            ]
+        }
+    ]
+}
+You're missing this requirements in 1 run {'missing_requirements': [{'scenario': 'Submit form with missing required fields', 'missing_steps': ['Leave the First Name field empty', 'Leave the Email field empty', 'Do not select any Gender', 'Leave the Mobile field empty', 'Do not select Date of Birth', 'Leave Subjects field empty', 'Do not select any Hobbies', 'Do not upload any image file', 'Leave the Current Address field empty', 'Do not select State and City']}]}
+Your test execution output:   Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_req_fix_1.py", line 113, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_req_fix_1.py", line 19, in test_scenario_0
+    driver.find_element(By.ID, 'gender-radio-1').click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input name="gender" required="" type="radio" id="gender-radio-1" class="custom-control-input" value="Male"> is not clickable at point (470, 329). Other element would receive the click: <label title="" for="gender-radio-1" class="custom-control-label">...</label>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000104cb6940 chromedriver + 4368704
+1   chromedriver                        0x0000000104caedd4 chromedriver + 4337108
+2   chromedriver                        0x00000001048d2c04 chromedriver + 289796
+3   chromedriver                        0x000000010491a88c chromedriver + 583820
+4   chromedriver                        0x0000000104918e20 chromedriver + 577056
+5   chromedriver                        0x0000000104916fac chromedriver + 569260
+6   chromedriver                        0x000000010491613c chromedriver + 565564
+7   chromedriver                        0x000000010490b940 chromedriver + 522560
+8   chromedriver                        0x000000010490b368 chromedriver + 521064
+9   chromedriver                        0x000000010494d5ec chromedriver + 792044
+10  chromedriver                        0x0000000104909ab4 chromedriver + 514740
+11  chromedriver                        0x000000010490a50c chromedriver + 517388
+12  chromedriver                        0x0000000104c7ae5c chromedriver + 4124252
+13  chromedriver                        0x0000000104c7fc4c chromedriver + 4144204
+14  chromedriver                        0x0000000104c60824 chromedriver + 4016164
+15  chromedriver                        0x0000000104c8057c chromedriver + 4146556
+16  chromedriver                        0x0000000104c522d8 chromedriver + 3957464
+17  chromedriver                        0x0000000104c9fec4 chromedriver + 4275908
+18  chromedriver                        0x0000000104ca0040 chromedriver + 4276288
+19  chromedriver                        0x0000000104caea34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+{
+    "implementation_errors": [
+        {
+            "error": "ElementClickInterceptedException",
+            "description": "The click on the gender radio button is intercepted by another element, likely the label for the radio button.",
+            "solution": "Use JavaScript to click the element or click the label associated with the radio button instead of the input element itself.",
+            "code_correction": "driver.execute_script(\"arguments[0].click();\", driver.find_element(By.ID, 'gender-radio-1'))",
+            "additional_notes": "Using JavaScript to perform the click bypasses the traditional user interaction model, which may not always be desirable for simulating real user behavior."
+        },
+        {
+            "error": "Incorrect exception handling",
+            "description": "The test script does not handle exceptions that might occur during the execution of the WebDriver commands outside of the main block.",
+            "solution": "Wrap WebDriver interactions in each test scenario function with try-except blocks to handle exceptions like NoSuchElementException, TimeoutException, etc.",
+            "code_correction": "Add try-except blocks in each test scenario function to handle specific exceptions and provide meaningful error messages."
+        },
+        {
+            "error": "Hardcoded file path",
+            "description": "The file path for the image upload is hardcoded, which makes the script less portable and may cause it to fail on different environments.",
+            "solution": "Use a relative path or configuration setting to specify the file path, making the script more flexible and portable.",
+            "code_correction": "driver.find_element(By.ID, 'uploadPicture').send_keys(os.path.join(os.path.dirname(__file__), 'path', 'to', 'image.png'))",
+            "additional_notes": "Ensure that the necessary imports (os.path) are added and that the file structure supports this path."
+        },
+        {
+            "error": "Visibility check might be incorrect",
+            "description": "The script checks for visibility of an element with ID 'example-modal-sizes-title-lg' which might not be the correct ID based on the provided HTML content.",
+            "solution": "Verify the correct element ID or attribute to ensure the visibility check is accurate post form submission.",
+            "code_correction": "Update the element ID in WebDriverWait and assert statement if it's incorrect based on actual application behavior."
+        },
+        {
+            "error": "Validation message assertion",
+            "description": "The script uses incorrect error message text in assertions for email and mobile number validation.",
+            "solution": "Correct the expected validation message text to match exactly what the browser provides or use regex/partial match if exact match isn't feasible.",
+            "code_correction": "Update the assertion message text to match the browser's validation message."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 117, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 30, in test_scenario_0
+    driver.find_element(By.ID, 'hobbies-checkbox-1').click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type="checkbox" id="hobbies-checkbox-1" class="custom-control-input" value="1"> is not clickable at point (470, 499). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" style="border: 0px; vertical-align: bottom;" data-google-container-id="1"></iframe>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x00000001008f6940 chromedriver + 4368704
+1   chromedriver                        0x00000001008eedd4 chromedriver + 4337108
+2   chromedriver                        0x0000000100512c04 chromedriver + 289796
+3   chromedriver                        0x000000010055a88c chromedriver + 583820
+4   chromedriver                        0x0000000100558e20 chromedriver + 577056
+5   chromedriver                        0x0000000100556fac chromedriver + 569260
+6   chromedriver                        0x000000010055613c chromedriver + 565564
+7   chromedriver                        0x000000010054b940 chromedriver + 522560
+8   chromedriver                        0x000000010054b368 chromedriver + 521064
+9   chromedriver                        0x000000010058d5ec chromedriver + 792044
+10  chromedriver                        0x0000000100549ab4 chromedriver + 514740
+11  chromedriver                        0x000000010054a50c chromedriver + 517388
+12  chromedriver                        0x00000001008bae5c chromedriver + 4124252
+13  chromedriver                        0x00000001008bfc4c chromedriver + 4144204
+14  chromedriver                        0x00000001008a0824 chromedriver + 4016164
+15  chromedriver                        0x00000001008c057c chromedriver + 4146556
+16  chromedriver                        0x00000001008922d8 chromedriver + 3957464
+17  chromedriver                        0x00000001008dfec4 chromedriver + 4275908
+18  chromedriver                        0x00000001008e0040 chromedriver + 4276288
+19  chromedriver                        0x00000001008eea34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 1 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 117, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 31, in test_scenario_0
+    driver.find_element(By.ID, 'uploadPicture').send_keys(os.path.join(os.path.dirname(__file__), 'path', 'to', 'image.png'))
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 231, in send_keys
+    self._execute(
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : /Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/path/to/image.png
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000100712940 chromedriver + 4368704
+1   chromedriver                        0x000000010070add4 chromedriver + 4337108
+2   chromedriver                        0x000000010032ec04 chromedriver + 289796
+3   chromedriver                        0x000000010036aac8 chromedriver + 535240
+4   chromedriver                        0x0000000100367368 chromedriver + 521064
+5   chromedriver                        0x00000001003a95ec chromedriver + 792044
+6   chromedriver                        0x0000000100365ab4 chromedriver + 514740
+7   chromedriver                        0x000000010036650c chromedriver + 517388
+8   chromedriver                        0x00000001006d6e5c chromedriver + 4124252
+9   chromedriver                        0x00000001006dbc4c chromedriver + 4144204
+10  chromedriver                        0x00000001006bc824 chromedriver + 4016164
+11  chromedriver                        0x00000001006dc57c chromedriver + 4146556
+12  chromedriver                        0x00000001006ae2d8 chromedriver + 3957464
+13  chromedriver                        0x00000001006fbec4 chromedriver + 4275908
+14  chromedriver                        0x00000001006fc040 chromedriver + 4276288
+15  chromedriver                        0x000000010070aa34 chromedriver + 4336180
+16  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 2 run Error in test_scenario_0: Message: invalid argument: File not found : /Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/image.png
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000100eb6940 chromedriver + 4368704
+1   chromedriver                        0x0000000100eaedd4 chromedriver + 4337108
+2   chromedriver                        0x0000000100ad2c04 chromedriver + 289796
+3   chromedriver                        0x0000000100b0eac8 chromedriver + 535240
+4   chromedriver                        0x0000000100b0b368 chromedriver + 521064
+5   chromedriver                        0x0000000100b4d5ec chromedriver + 792044
+6   chromedriver                        0x0000000100b09ab4 chromedriver + 514740
+7   chromedriver                        0x0000000100b0a50c chromedriver + 517388
+8   chromedriver                        0x0000000100e7ae5c chromedriver + 4124252
+9   chromedriver                        0x0000000100e7fc4c chromedriver + 4144204
+10  chromedriver                        0x0000000100e60824 chromedriver + 4016164
+11  chromedriver                        0x0000000100e8057c chromedriver + 4146556
+12  chromedriver                        0x0000000100e522d8 chromedriver + 3957464
+13  chromedriver                        0x0000000100e9fec4 chromedriver + 4275908
+14  chromedriver                        0x0000000100ea0040 chromedriver + 4276288
+15  chromedriver                        0x0000000100eaea34 chromedriver + 4336180
+16  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+Error in test_scenario_1: Message: element click intercepted: Element <button id="submit" type="submit" class="btn btn-primary">...</button> is not clickable at point (839, 568). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" style="border: 0px; vertical-align: bottom;" data-google-container-id="1"></iframe>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000100ab2940 chromedriver + 4368704
+1   chromedriver                        0x0000000100aaadd4 chromedriver + 4337108
+2   chromedriver                        0x00000001006cec04 chromedriver + 289796
+3   chromedriver                        0x000000010071688c chromedriver + 583820
+4   chromedriver                        0x0000000100714e20 chromedriver + 577056
+5   chromedriver                        0x0000000100712fac chromedriver + 569260
+6   chromedriver                        0x000000010071213c chromedriver + 565564
+7   chromedriver                        0x0000000100707940 chromedriver + 522560
+8   chromedriver                        0x0000000100707368 chromedriver + 521064
+9   chromedriver                        0x00000001007495ec chromedriver + 792044
+10  chromedriver                        0x0000000100705ab4 chromedriver + 514740
+11  chromedriver                        0x000000010070650c chromedriver + 517388
+12  chromedriver                        0x0000000100a76e5c chromedriver + 4124252
+13  chromedriver                        0x0000000100a7bc4c chromedriver + 4144204
+14  chromedriver                        0x0000000100a5c824 chromedriver + 4016164
+15  chromedriver                        0x0000000100a7c57c chromedriver + 4146556
+16  chromedriver                        0x0000000100a4e2d8 chromedriver + 3957464
+17  chromedriver                        0x0000000100a9bec4 chromedriver + 4275908
+18  chromedriver                        0x0000000100a9c040 chromedriver + 4276288
+19  chromedriver                        0x0000000100aaaa34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+Error in test_scenario_2: Message: invalid argument: File not found : /Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/image.png
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x000000010297a940 chromedriver + 4368704
+1   chromedriver                        0x0000000102972dd4 chromedriver + 4337108
+2   chromedriver                        0x0000000102596c04 chromedriver + 289796
+3   chromedriver                        0x00000001025d2ac8 chromedriver + 535240
+4   chromedriver                        0x00000001025cf368 chromedriver + 521064
+5   chromedriver                        0x00000001026115ec chromedriver + 792044
+6   chromedriver                        0x00000001025cdab4 chromedriver + 514740
+7   chromedriver                        0x00000001025ce50c chromedriver + 517388
+8   chromedriver                        0x000000010293ee5c chromedriver + 4124252
+9   chromedriver                        0x0000000102943c4c chromedriver + 4144204
+10  chromedriver                        0x0000000102924824 chromedriver + 4016164
+11  chromedriver                        0x000000010294457c chromedriver + 4146556
+12  chromedriver                        0x00000001029162d8 chromedriver + 3957464
+13  chromedriver                        0x0000000102963ec4 chromedriver + 4275908
+14  chromedriver                        0x0000000102964040 chromedriver + 4276288
+15  chromedriver                        0x0000000102972a34 chromedriver + 4336180
+16  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+Error in test_scenario_3: Message: invalid argument: File not found : /Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/image.png
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000104d12940 chromedriver + 4368704
+1   chromedriver                        0x0000000104d0add4 chromedriver + 4337108
+2   chromedriver                        0x000000010492ec04 chromedriver + 289796
+3   chromedriver                        0x000000010496aac8 chromedriver + 535240
+4   chromedriver                        0x0000000104967368 chromedriver + 521064
+5   chromedriver                        0x00000001049a95ec chromedriver + 792044
+6   chromedriver                        0x0000000104965ab4 chromedriver + 514740
+7   chromedriver                        0x000000010496650c chromedriver + 517388
+8   chromedriver                        0x0000000104cd6e5c chromedriver + 4124252
+9   chromedriver                        0x0000000104cdbc4c chromedriver + 4144204
+10  chromedriver                        0x0000000104cbc824 chromedriver + 4016164
+11  chromedriver                        0x0000000104cdc57c chromedriver + 4146556
+12  chromedriver                        0x0000000104cae2d8 chromedriver + 3957464
+13  chromedriver                        0x0000000104cfbec4 chromedriver + 4275908
+14  chromedriver                        0x0000000104cfc040 chromedriver + 4276288
+15  chromedriver                        0x0000000104d0aa34 chromedriver + 4336180
+16  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+ 
+Your test execution output in 3 run Error in test_scenario_0: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="firstName"]"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000101266940 chromedriver + 4368704
+1   chromedriver                        0x000000010125edd4 chromedriver + 4337108
+2   chromedriver                        0x0000000100e82c04 chromedriver + 289796
+3   chromedriver                        0x0000000100ec4e00 chromedriver + 560640
+4   chromedriver                        0x0000000100efd5ec chromedriver + 792044
+5   chromedriver                        0x0000000100eb9ab4 chromedriver + 514740
+6   chromedriver                        0x0000000100eba50c chromedriver + 517388
+7   chromedriver                        0x000000010122ae5c chromedriver + 4124252
+8   chromedriver                        0x000000010122fc4c chromedriver + 4144204
+9   chromedriver                        0x0000000101210824 chromedriver + 4016164
+10  chromedriver                        0x000000010123057c chromedriver + 4146556
+11  chromedriver                        0x00000001012022d8 chromedriver + 3957464
+12  chromedriver                        0x000000010124fec4 chromedriver + 4275908
+13  chromedriver                        0x0000000101250040 chromedriver + 4276288
+14  chromedriver                        0x000000010125ea34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+Error in test_scenario_1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="submit"]"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100e96940 chromedriver + 4368704
+1   chromedriver                        0x0000000100e8edd4 chromedriver + 4337108
+2   chromedriver                        0x0000000100ab2c04 chromedriver + 289796
+3   chromedriver                        0x0000000100af4e00 chromedriver + 560640
+4   chromedriver                        0x0000000100b2d5ec chromedriver + 792044
+5   chromedriver                        0x0000000100ae9ab4 chromedriver + 514740
+6   chromedriver                        0x0000000100aea50c chromedriver + 517388
+7   chromedriver                        0x0000000100e5ae5c chromedriver + 4124252
+8   chromedriver                        0x0000000100e5fc4c chromedriver + 4144204
+9   chromedriver                        0x0000000100e40824 chromedriver + 4016164
+10  chromedriver                        0x0000000100e6057c chromedriver + 4146556
+11  chromedriver                        0x0000000100e322d8 chromedriver + 3957464
+12  chromedriver                        0x0000000100e7fec4 chromedriver + 4275908
+13  chromedriver                        0x0000000100e80040 chromedriver + 4276288
+14  chromedriver                        0x0000000100e8ea34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+Error in test_scenario_2: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="firstName"]"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102a4a940 chromedriver + 4368704
+1   chromedriver                        0x0000000102a42dd4 chromedriver + 4337108
+2   chromedriver                        0x0000000102666c04 chromedriver + 289796
+3   chromedriver                        0x00000001026a8e00 chromedriver + 560640
+4   chromedriver                        0x00000001026e15ec chromedriver + 792044
+5   chromedriver                        0x000000010269dab4 chromedriver + 514740
+6   chromedriver                        0x000000010269e50c chromedriver + 517388
+7   chromedriver                        0x0000000102a0ee5c chromedriver + 4124252
+8   chromedriver                        0x0000000102a13c4c chromedriver + 4144204
+9   chromedriver                        0x00000001029f4824 chromedriver + 4016164
+10  chromedriver                        0x0000000102a1457c chromedriver + 4146556
+11  chromedriver                        0x00000001029e62d8 chromedriver + 3957464
+12  chromedriver                        0x0000000102a33ec4 chromedriver + 4275908
+13  chromedriver                        0x0000000102a34040 chromedriver + 4276288
+14  chromedriver                        0x0000000102a42a34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+Error in test_scenario_3: Message: invalid argument: File not found : /Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/image.png
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000104f66940 chromedriver + 4368704
+1   chromedriver                        0x0000000104f5edd4 chromedriver + 4337108
+2   chromedriver                        0x0000000104b82c04 chromedriver + 289796
+3   chromedriver                        0x0000000104bbeac8 chromedriver + 535240
+4   chromedriver                        0x0000000104bbb368 chromedriver + 521064
+5   chromedriver                        0x0000000104bfd5ec chromedriver + 792044
+6   chromedriver                        0x0000000104bb9ab4 chromedriver + 514740
+7   chromedriver                        0x0000000104bba50c chromedriver + 517388
+8   chromedriver                        0x0000000104f2ae5c chromedriver + 4124252
+9   chromedriver                        0x0000000104f2fc4c chromedriver + 4144204
+10  chromedriver                        0x0000000104f10824 chromedriver + 4016164
+11  chromedriver                        0x0000000104f3057c chromedriver + 4146556
+12  chromedriver                        0x0000000104f022d8 chromedriver + 3957464
+13  chromedriver                        0x0000000104f4fec4 chromedriver + 4275908
+14  chromedriver                        0x0000000104f50040 chromedriver + 4276288
+15  chromedriver                        0x0000000104f5ea34 chromedriver + 4336180
+16  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+ 
+Your test execution output in 4 run Error in test_scenario_0: Message: invalid argument: File not found : /Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/image.png
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x000000010069e940 chromedriver + 4368704
+1   chromedriver                        0x0000000100696dd4 chromedriver + 4337108
+2   chromedriver                        0x00000001002bac04 chromedriver + 289796
+3   chromedriver                        0x00000001002f6ac8 chromedriver + 535240
+4   chromedriver                        0x00000001002f3368 chromedriver + 521064
+5   chromedriver                        0x00000001003355ec chromedriver + 792044
+6   chromedriver                        0x00000001002f1ab4 chromedriver + 514740
+7   chromedriver                        0x00000001002f250c chromedriver + 517388
+8   chromedriver                        0x0000000100662e5c chromedriver + 4124252
+9   chromedriver                        0x0000000100667c4c chromedriver + 4144204
+10  chromedriver                        0x0000000100648824 chromedriver + 4016164
+11  chromedriver                        0x000000010066857c chromedriver + 4146556
+12  chromedriver                        0x000000010063a2d8 chromedriver + 3957464
+13  chromedriver                        0x0000000100687ec4 chromedriver + 4275908
+14  chromedriver                        0x0000000100688040 chromedriver + 4276288
+15  chromedriver                        0x0000000100696a34 chromedriver + 4336180
+16  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+Error in test_scenario_1: Message: element click intercepted: Element <button id="submit" type="submit" class="btn btn-primary">...</button> is not clickable at point (839, 568). Other element would receive the click: <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" allow="attribution-reporting" data-load-complete="true" style="border: 0px; vertical-align: bottom;" data-google-container-id="1"></iframe>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x000000010276e940 chromedriver + 4368704
+1   chromedriver                        0x0000000102766dd4 chromedriver + 4337108
+2   chromedriver                        0x000000010238ac04 chromedriver + 289796
+3   chromedriver                        0x00000001023d288c chromedriver + 583820
+4   chromedriver                        0x00000001023d0e20 chromedriver + 577056
+5   chromedriver                        0x00000001023cefac chromedriver + 569260
+6   chromedriver                        0x00000001023ce13c chromedriver + 565564
+7   chromedriver                        0x00000001023c3940 chromedriver + 522560
+8   chromedriver                        0x00000001023c3368 chromedriver + 521064
+9   chromedriver                        0x00000001024055ec chromedriver + 792044
+10  chromedriver                        0x00000001023c1ab4 chromedriver + 514740
+11  chromedriver                        0x00000001023c250c chromedriver + 517388
+12  chromedriver                        0x0000000102732e5c chromedriver + 4124252
+13  chromedriver                        0x0000000102737c4c chromedriver + 4144204
+14  chromedriver                        0x0000000102718824 chromedriver + 4016164
+15  chromedriver                        0x000000010273857c chromedriver + 4146556
+16  chromedriver                        0x000000010270a2d8 chromedriver + 3957464
+17  chromedriver                        0x0000000102757ec4 chromedriver + 4275908
+18  chromedriver                        0x0000000102758040 chromedriver + 4276288
+19  chromedriver                        0x0000000102766a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+Error in test_scenario_2: Message: invalid argument: File not found : /Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/image.png
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x00000001012ba940 chromedriver + 4368704
+1   chromedriver                        0x00000001012b2dd4 chromedriver + 4337108
+2   chromedriver                        0x0000000100ed6c04 chromedriver + 289796
+3   chromedriver                        0x0000000100f12ac8 chromedriver + 535240
+4   chromedriver                        0x0000000100f0f368 chromedriver + 521064
+5   chromedriver                        0x0000000100f515ec chromedriver + 792044
+6   chromedriver                        0x0000000100f0dab4 chromedriver + 514740
+7   chromedriver                        0x0000000100f0e50c chromedriver + 517388
+8   chromedriver                        0x000000010127ee5c chromedriver + 4124252
+9   chromedriver                        0x0000000101283c4c chromedriver + 4144204
+10  chromedriver                        0x0000000101264824 chromedriver + 4016164
+11  chromedriver                        0x000000010128457c chromedriver + 4146556
+12  chromedriver                        0x00000001012562d8 chromedriver + 3957464
+13  chromedriver                        0x00000001012a3ec4 chromedriver + 4275908
+14  chromedriver                        0x00000001012a4040 chromedriver + 4276288
+15  chromedriver                        0x00000001012b2a34 chromedriver + 4336180
+16  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+Error in test_scenario_3: Message: invalid argument: File not found : /Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/image.png
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x00000001031b6940 chromedriver + 4368704
+1   chromedriver                        0x00000001031aedd4 chromedriver + 4337108
+2   chromedriver                        0x0000000102dd2c04 chromedriver + 289796
+3   chromedriver                        0x0000000102e0eac8 chromedriver + 535240
+4   chromedriver                        0x0000000102e0b368 chromedriver + 521064
+5   chromedriver                        0x0000000102e4d5ec chromedriver + 792044
+6   chromedriver                        0x0000000102e09ab4 chromedriver + 514740
+7   chromedriver                        0x0000000102e0a50c chromedriver + 517388
+8   chromedriver                        0x000000010317ae5c chromedriver + 4124252
+9   chromedriver                        0x000000010317fc4c chromedriver + 4144204
+10  chromedriver                        0x0000000103160824 chromedriver + 4016164
+11  chromedriver                        0x000000010318057c chromedriver + 4146556
+12  chromedriver                        0x00000001031522d8 chromedriver + 3957464
+13  chromedriver                        0x000000010319fec4 chromedriver + 4275908
+14  chromedriver                        0x00000001031a0040 chromedriver + 4276288
+15  chromedriver                        0x00000001031aea34 chromedriver + 4336180
+16  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+ 
+Execution time: 708.5215179920197 seconds
+
+GPT3.5 Prompt tokens: 99906, $0.049953
+GPT3.5 Response tokens: 15176, $0.022764
+
+GPT4 Prompt time: 99906, $0.9990600000000001
+GPT4 Response tokens: 15176, $0.45528
+

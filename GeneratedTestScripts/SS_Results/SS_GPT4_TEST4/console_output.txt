@@ -1,0 +1,398 @@
+[{'scenario': 'Search with valid keyword', 'steps': ['Navigate to the search page', "Enter a valid keyword in the 'Meklējamais vārds vai frāze' field", "Click the 'Meklēt' button"], 'input_data': {'keyword': 'auto'}, 'expected_result': "Search results related to 'auto' are displayed"}, {'scenario': 'Search with empty keyword', 'steps': ['Navigate to the search page', "Leave the 'Meklējamais vārds vai frāze' field empty", "Click the 'Meklēt' button"], 'input_data': {'keyword': ''}, 'expected_result': 'An error message indicating that the keyword field is required'}, {'scenario': 'Search with special characters in keyword', 'steps': ['Navigate to the search page', "Enter special characters in the 'Meklējamais vārds vai frāze' field", "Click the 'Meklēt' button"], 'input_data': {'keyword': '@#$%^&*()'}, 'expected_result': 'An error message indicating invalid characters or no results found message'}, {'scenario': 'Search with valid section selection', 'steps': ['Navigate to the search page', "Select a valid section from the 'Sadaļa' dropdown", "Click the 'Meklēt' button"], 'input_data': {'section': 'Transports'}, 'expected_result': "Search results related to the 'Transports' section are displayed"}, {'scenario': 'Search with default section selection', 'steps': ['Navigate to the search page', "Do not change the default selection in the 'Sadaļa' dropdown", "Click the 'Meklēt' button"], 'input_data': {'section': '-1'}, 'expected_result': 'An error message indicating that a section must be selected'}, {'scenario': 'Search with valid city selection', 'steps': ['Navigate to the search page', "Select a valid city from the 'Pilsēta, rajons' dropdown", "Click the 'Meklēt' button"], 'input_data': {'city': 'Rīga'}, 'expected_result': 'Search results related to the selected city are displayed'}, {'scenario': 'Search with all cities selection', 'steps': ['Navigate to the search page', "Select 'Visi sludinājumi' from the 'Pilsēta, rajons' dropdown", "Click the 'Meklēt' button"], 'input_data': {'city': '0'}, 'expected_result': 'Search results from all cities are displayed'}, {'scenario': 'Search with valid period selection', 'steps': ['Navigate to the search page', "Select a valid period from the 'Meklēt par periodu' dropdown", "Click the 'Meklēt' button"], 'input_data': {'period': '7'}, 'expected_result': 'Search results from the last week are displayed'}, {'scenario': 'Search with default period selection', 'steps': ['Navigate to the search page', "Do not change the default selection in the 'Meklēt par periodu' dropdown", "Click the 'Meklēt' button"], 'input_data': {'period': '0'}, 'expected_result': 'Search results from all periods are displayed'}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Search with valid keyword', 'steps': ['Navigate to the search page', "Enter a valid keyword in the 'Meklējamais vārds vai frāze' field", "Click the 'Meklēt' button"], 'input_data': {'keyword': 'auto'}, 'expected_result': "Search results related to 'auto' are displayed"}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Search with empty keyword', 'steps': ['Navigate to the search page', "Leave the 'Meklējamais vārds vai frāze' field empty", "Click the 'Meklēt' button"], 'input_data': {'keyword': ''}, 'expected_result': 'An error message indicating that the keyword field is required'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_2():
+    """
+    {'scenario': 'Search with special characters in keyword', 'steps': ['Navigate to the search page', "Enter special characters in the 'Meklējamais vārds vai frāze' field", "Click the 'Meklēt' button"], 'input_data': {'keyword': '@#$%^&*()'}, 'expected_result': 'An error message indicating invalid characters or no results found message'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_3():
+    """
+    {'scenario': 'Search with valid section selection', 'steps': ['Navigate to the search page', "Select a valid section from the 'Sadaļa' dropdown", "Click the 'Meklēt' button"], 'input_data': {'section': 'Transports'}, 'expected_result': "Search results related to the 'Transports' section are displayed"}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_4():
+    """
+    {'scenario': 'Search with default section selection', 'steps': ['Navigate to the search page', "Do not change the default selection in the 'Sadaļa' dropdown", "Click the 'Meklēt' button"], 'input_data': {'section': '-1'}, 'expected_result': 'An error message indicating that a section must be selected'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_5():
+    """
+    {'scenario': 'Search with valid city selection', 'steps': ['Navigate to the search page', "Select a valid city from the 'Pilsēta, rajons' dropdown", "Click the 'Meklēt' button"], 'input_data': {'city': 'Rīga'}, 'expected_result': 'Search results related to the selected city are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_6():
+    """
+    {'scenario': 'Search with all cities selection', 'steps': ['Navigate to the search page', "Select 'Visi sludinājumi' from the 'Pilsēta, rajons' dropdown", "Click the 'Meklēt' button"], 'input_data': {'city': '0'}, 'expected_result': 'Search results from all cities are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_7():
+    """
+    {'scenario': 'Search with valid period selection', 'steps': ['Navigate to the search page', "Select a valid period from the 'Meklēt par periodu' dropdown", "Click the 'Meklēt' button"], 'input_data': {'period': '7'}, 'expected_result': 'Search results from the last week are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_8():
+    """
+    {'scenario': 'Search with default period selection', 'steps': ['Navigate to the search page', "Do not change the default selection in the 'Meklēt par periodu' dropdown", "Click the 'Meklēt' button"], 'input_data': {'period': '0'}, 'expected_result': 'Search results from all periods are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+    try:
+        test_scenario_2()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_2:", e)
+        
+    try:
+        test_scenario_3()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_3:", e)
+        
+    try:
+        test_scenario_4()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_4:", e)
+        
+    try:
+        test_scenario_5()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_5:", e)
+        
+    try:
+        test_scenario_6()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_6:", e)
+        
+    try:
+        test_scenario_7()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_7:", e)
+        
+    try:
+        test_scenario_8()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_8:", e)
+        
+{
+    "missing_requirements": []
+}
+Your test execution output:   Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 112, in <module>
+    test_search_with_empty_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 25, in test_search_with_empty_keyword
+    error_message = driver.find_element(By.CSS_SELECTOR, '.d6').text
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".d6"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100dd2940 chromedriver + 4368704
+1   chromedriver                        0x0000000100dcadd4 chromedriver + 4337108
+2   chromedriver                        0x00000001009eec04 chromedriver + 289796
+3   chromedriver                        0x0000000100a30e00 chromedriver + 560640
+4   chromedriver                        0x0000000100a695ec chromedriver + 792044
+5   chromedriver                        0x0000000100a25ab4 chromedriver + 514740
+6   chromedriver                        0x0000000100a2650c chromedriver + 517388
+7   chromedriver                        0x0000000100d96e5c chromedriver + 4124252
+8   chromedriver                        0x0000000100d9bc4c chromedriver + 4144204
+9   chromedriver                        0x0000000100d7c824 chromedriver + 4016164
+10  chromedriver                        0x0000000100d9c57c chromedriver + 4146556
+11  chromedriver                        0x0000000100d6e2d8 chromedriver + 3957464
+12  chromedriver                        0x0000000100dbbec4 chromedriver + 4275908
+13  chromedriver                        0x0000000100dbc040 chromedriver + 4276288
+14  chromedriver                        0x0000000100dcaa34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+{
+    "implementation_errors": [
+        {
+            "error": "NoSuchElementException",
+            "description": "The CSS selector '.d6' used to find the error message element does not exist in the HTML structure.",
+            "method": "test_search_with_empty_keyword",
+            "suggested_fix": "Use the correct CSS selector to locate the error message. If the error message is dynamically generated and does not have a specific class, consider using other attributes or methods to locate it. For example, you might need to check if the error message is within a specific div or other container that has a unique identifier or structure."
+        },
+        {
+            "error": "NoSuchElementException",
+            "description": "The CSS selector '.d6' used to find the error message element does not exist in the HTML structure.",
+            "method": "test_search_with_default_section_selection",
+            "suggested_fix": "Use the correct CSS selector to locate the error message. If the error message is dynamically generated and does not have a specific class, consider using other attributes or methods to locate it. For example, you might need to check if the error message is within a specific div or other container that has a unique identifier or structure."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 111, in <module>
+    test_search_with_valid_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 14, in test_search_with_valid_keyword
+    search_button.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type="submit" name="btn" id="sbtn" border="1" value="Meklēt" class="btn" style="width:200px;"> is not clickable at point (506, 262). Other element would receive the click: <div id="cmp_9" style="padding:2px;cursor:default;selectablez=false;" onmouseover="cmp_over(9)" onmouseout="cmp_out(9)" onclick="show_s_dv('none',1);">...</div>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x000000010259a940 chromedriver + 4368704
+1   chromedriver                        0x0000000102592dd4 chromedriver + 4337108
+2   chromedriver                        0x00000001021b6c04 chromedriver + 289796
+3   chromedriver                        0x00000001021fe88c chromedriver + 583820
+4   chromedriver                        0x00000001021fce20 chromedriver + 577056
+5   chromedriver                        0x00000001021fafac chromedriver + 569260
+6   chromedriver                        0x00000001021fa13c chromedriver + 565564
+7   chromedriver                        0x00000001021ef940 chromedriver + 522560
+8   chromedriver                        0x00000001021ef368 chromedriver + 521064
+9   chromedriver                        0x00000001022315ec chromedriver + 792044
+10  chromedriver                        0x00000001021edab4 chromedriver + 514740
+11  chromedriver                        0x00000001021ee50c chromedriver + 517388
+12  chromedriver                        0x000000010255ee5c chromedriver + 4124252
+13  chromedriver                        0x0000000102563c4c chromedriver + 4144204
+14  chromedriver                        0x0000000102544824 chromedriver + 4016164
+15  chromedriver                        0x000000010256457c chromedriver + 4146556
+16  chromedriver                        0x00000001025362d8 chromedriver + 3957464
+17  chromedriver                        0x0000000102583ec4 chromedriver + 4275908
+18  chromedriver                        0x0000000102584040 chromedriver + 4276288
+19  chromedriver                        0x0000000102592a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 1 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 124, in <module>
+    test_search_with_valid_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 16, in test_search_with_valid_keyword
+    search_button.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type="submit" name="btn" id="sbtn" border="1" value="Meklēt" class="btn" style="width:200px;"> is not clickable at point (506, 262). Other element would receive the click: <div id="cmp_9" style="padding:2px;cursor:default;selectablez=false;" onmouseover="cmp_over(9)" onmouseout="cmp_out(9)" onclick="show_s_dv('none',1);">...</div>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000102f16940 chromedriver + 4368704
+1   chromedriver                        0x0000000102f0edd4 chromedriver + 4337108
+2   chromedriver                        0x0000000102b32c04 chromedriver + 289796
+3   chromedriver                        0x0000000102b7a88c chromedriver + 583820
+4   chromedriver                        0x0000000102b78e20 chromedriver + 577056
+5   chromedriver                        0x0000000102b76fac chromedriver + 569260
+6   chromedriver                        0x0000000102b7613c chromedriver + 565564
+7   chromedriver                        0x0000000102b6b940 chromedriver + 522560
+8   chromedriver                        0x0000000102b6b368 chromedriver + 521064
+9   chromedriver                        0x0000000102bad5ec chromedriver + 792044
+10  chromedriver                        0x0000000102b69ab4 chromedriver + 514740
+11  chromedriver                        0x0000000102b6a50c chromedriver + 517388
+12  chromedriver                        0x0000000102edae5c chromedriver + 4124252
+13  chromedriver                        0x0000000102edfc4c chromedriver + 4144204
+14  chromedriver                        0x0000000102ec0824 chromedriver + 4016164
+15  chromedriver                        0x0000000102ee057c chromedriver + 4146556
+16  chromedriver                        0x0000000102eb22d8 chromedriver + 3957464
+17  chromedriver                        0x0000000102effec4 chromedriver + 4275908
+18  chromedriver                        0x0000000102f00040 chromedriver + 4276288
+19  chromedriver                        0x0000000102f0ea34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 2 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 28, in test_search_with_empty_keyword
+    error_message = driver.find_element(By.CSS_SELECTOR, 'div.error')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.error"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104e52940 chromedriver + 4368704
+1   chromedriver                        0x0000000104e4add4 chromedriver + 4337108
+2   chromedriver                        0x0000000104a6ec04 chromedriver + 289796
+3   chromedriver                        0x0000000104ab0e00 chromedriver + 560640
+4   chromedriver                        0x0000000104ae95ec chromedriver + 792044
+5   chromedriver                        0x0000000104aa5ab4 chromedriver + 514740
+6   chromedriver                        0x0000000104aa650c chromedriver + 517388
+7   chromedriver                        0x0000000104e16e5c chromedriver + 4124252
+8   chromedriver                        0x0000000104e1bc4c chromedriver + 4144204
+9   chromedriver                        0x0000000104dfc824 chromedriver + 4016164
+10  chromedriver                        0x0000000104e1c57c chromedriver + 4146556
+11  chromedriver                        0x0000000104dee2d8 chromedriver + 3957464
+12  chromedriver                        0x0000000104e3bec4 chromedriver + 4275908
+13  chromedriver                        0x0000000104e3c040 chromedriver + 4276288
+14  chromedriver                        0x0000000104e4aa34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 125, in <module>
+    test_search_with_empty_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 31, in test_search_with_empty_keyword
+    assert False, 'Error message element not found'
+           ^^^^^
+AssertionError: Error message element not found
+
+Your test execution output in 3 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 28, in test_search_with_empty_keyword
+    error_message = driver.find_element(By.CSS_SELECTOR, 'div.msg_div')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.msg_div"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010450e940 chromedriver + 4368704
+1   chromedriver                        0x0000000104506dd4 chromedriver + 4337108
+2   chromedriver                        0x000000010412ac04 chromedriver + 289796
+3   chromedriver                        0x000000010416ce00 chromedriver + 560640
+4   chromedriver                        0x00000001041a55ec chromedriver + 792044
+5   chromedriver                        0x0000000104161ab4 chromedriver + 514740
+6   chromedriver                        0x000000010416250c chromedriver + 517388
+7   chromedriver                        0x00000001044d2e5c chromedriver + 4124252
+8   chromedriver                        0x00000001044d7c4c chromedriver + 4144204
+9   chromedriver                        0x00000001044b8824 chromedriver + 4016164
+10  chromedriver                        0x00000001044d857c chromedriver + 4146556
+11  chromedriver                        0x00000001044aa2d8 chromedriver + 3957464
+12  chromedriver                        0x00000001044f7ec4 chromedriver + 4275908
+13  chromedriver                        0x00000001044f8040 chromedriver + 4276288
+14  chromedriver                        0x0000000104506a34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 125, in <module>
+    test_search_with_empty_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 31, in test_search_with_empty_keyword
+    assert False, 'Error message element not found'
+           ^^^^^
+AssertionError: Error message element not found
+
+Your test execution output in 4 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 28, in test_search_with_empty_keyword
+    error_message = driver.find_element(By.CSS_SELECTOR, 'div.d6')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.d6"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001013aa940 chromedriver + 4368704
+1   chromedriver                        0x00000001013a2dd4 chromedriver + 4337108
+2   chromedriver                        0x0000000100fc6c04 chromedriver + 289796
+3   chromedriver                        0x0000000101008e00 chromedriver + 560640
+4   chromedriver                        0x00000001010415ec chromedriver + 792044
+5   chromedriver                        0x0000000100ffdab4 chromedriver + 514740
+6   chromedriver                        0x0000000100ffe50c chromedriver + 517388
+7   chromedriver                        0x000000010136ee5c chromedriver + 4124252
+8   chromedriver                        0x0000000101373c4c chromedriver + 4144204
+9   chromedriver                        0x0000000101354824 chromedriver + 4016164
+10  chromedriver                        0x000000010137457c chromedriver + 4146556
+11  chromedriver                        0x00000001013462d8 chromedriver + 3957464
+12  chromedriver                        0x0000000101393ec4 chromedriver + 4275908
+13  chromedriver                        0x0000000101394040 chromedriver + 4276288
+14  chromedriver                        0x00000001013a2a34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 125, in <module>
+    test_search_with_empty_keyword()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 31, in test_search_with_empty_keyword
+    assert False, 'Error message element not found'
+           ^^^^^
+AssertionError: Error message element not found
+
+Execution time: 535.3038699626923 seconds
+
+GPT3.5 Prompt tokens: 65141, $0.032570499999999995
+GPT3.5 Response tokens: 10170, $0.015255000000000001
+
+GPT4 Prompt time: 65141, $0.65141
+GPT4 Response tokens: 10170, $0.3051
+

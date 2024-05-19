@@ -1,0 +1,302 @@
+[{'scenario': 'Verify that the user is able to fill out the student registration form with valid data and submit successfully', 'test_steps': [{'step': 'Enter valid first name', 'input_data': 'John'}, {'step': 'Enter valid last name', 'input_data': 'Doe'}, {'step': 'Enter valid email address', 'input_data': 'johndoe@example.com'}, {'step': 'Select gender as Male', 'input_data': 'Male'}, {'step': 'Enter valid 10-digit mobile number', 'input_data': '1234567890'}, {'step': 'Select valid date of birth', 'input_data': '15 May 1990'}, {'step': 'Select subjects', 'input_data': 'Maths, English'}, {'step': 'Select hobbies', 'input_data': 'Sports, Reading'}, {'step': 'Upload a valid picture', 'input_data': 'valid_picture.jpg'}, {'step': 'Enter valid current address', 'input_data': '123 Main Street, City, Country'}, {'step': 'Select valid state and city', 'input_data': 'California, Los Angeles'}, {'step': 'Click on Submit button', 'input_data': ''}]}, {'scenario': 'Verify that the form validation works correctly when submitting the form with invalid data', 'test_steps': [{'step': 'Enter invalid first name', 'input_data': '123'}, {'step': 'Enter invalid last name', 'input_data': 'Doe123'}, {'step': 'Enter invalid email address', 'input_data': 'johndoe@example'}, {'step': 'Select gender as Female', 'input_data': 'Female'}, {'step': 'Enter invalid mobile number', 'input_data': '12345'}, {'step': 'Select invalid date of birth', 'input_data': '30 Feb 2000'}, {'step': 'Select no subjects', 'input_data': ''}, {'step': 'Select no hobbies', 'input_data': ''}, {'step': 'Upload an invalid picture', 'input_data': 'invalid_picture.txt'}, {'step': 'Enter invalid current address', 'input_data': ''}, {'step': 'Select invalid state and city', 'input_data': 'InvalidState, InvalidCity'}, {'step': 'Click on Submit button', 'input_data': ''}]}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Verify that the user is able to fill out the student registration form with valid data and submit successfully', 'test_steps': [{'step': 'Enter valid first name', 'input_data': 'John'}, {'step': 'Enter valid last name', 'input_data': 'Doe'}, {'step': 'Enter valid email address', 'input_data': 'johndoe@example.com'}, {'step': 'Select gender as Male', 'input_data': 'Male'}, {'step': 'Enter valid 10-digit mobile number', 'input_data': '1234567890'}, {'step': 'Select valid date of birth', 'input_data': '15 May 1990'}, {'step': 'Select subjects', 'input_data': 'Maths, English'}, {'step': 'Select hobbies', 'input_data': 'Sports, Reading'}, {'step': 'Upload a valid picture', 'input_data': 'valid_picture.jpg'}, {'step': 'Enter valid current address', 'input_data': '123 Main Street, City, Country'}, {'step': 'Select valid state and city', 'input_data': 'California, Los Angeles'}, {'step': 'Click on Submit button', 'input_data': ''}]}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Verify that the form validation works correctly when submitting the form with invalid data', 'test_steps': [{'step': 'Enter invalid first name', 'input_data': '123'}, {'step': 'Enter invalid last name', 'input_data': 'Doe123'}, {'step': 'Enter invalid email address', 'input_data': 'johndoe@example'}, {'step': 'Select gender as Female', 'input_data': 'Female'}, {'step': 'Enter invalid mobile number', 'input_data': '12345'}, {'step': 'Select invalid date of birth', 'input_data': '30 Feb 2000'}, {'step': 'Select no subjects', 'input_data': ''}, {'step': 'Select no hobbies', 'input_data': ''}, {'step': 'Upload an invalid picture', 'input_data': 'invalid_picture.txt'}, {'step': 'Enter invalid current address', 'input_data': ''}, {'step': 'Select invalid state and city', 'input_data': 'InvalidState, InvalidCity'}, {'step': 'Click on Submit button', 'input_data': ''}]}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+{
+    "missing_requirements": []
+}
+Your test execution output:   Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 71, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 20, in test_scenario_0
+    gender.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input name="gender" required="" type="radio" id="gender-radio-1" class="custom-control-input" value="Male"> is not clickable at point (476, 336). Other element would receive the click: <label title="" for="gender-radio-1" class="custom-control-label">...</label>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000102b8e940 chromedriver + 4368704
+1   chromedriver                        0x0000000102b86dd4 chromedriver + 4337108
+2   chromedriver                        0x00000001027aac04 chromedriver + 289796
+3   chromedriver                        0x00000001027f288c chromedriver + 583820
+4   chromedriver                        0x00000001027f0e20 chromedriver + 577056
+5   chromedriver                        0x00000001027eefac chromedriver + 569260
+6   chromedriver                        0x00000001027ee13c chromedriver + 565564
+7   chromedriver                        0x00000001027e3940 chromedriver + 522560
+8   chromedriver                        0x00000001027e3368 chromedriver + 521064
+9   chromedriver                        0x00000001028255ec chromedriver + 792044
+10  chromedriver                        0x00000001027e1ab4 chromedriver + 514740
+11  chromedriver                        0x00000001027e250c chromedriver + 517388
+12  chromedriver                        0x0000000102b52e5c chromedriver + 4124252
+13  chromedriver                        0x0000000102b57c4c chromedriver + 4144204
+14  chromedriver                        0x0000000102b38824 chromedriver + 4016164
+15  chromedriver                        0x0000000102b5857c chromedriver + 4146556
+16  chromedriver                        0x0000000102b2a2d8 chromedriver + 3957464
+17  chromedriver                        0x0000000102b77ec4 chromedriver + 4275908
+18  chromedriver                        0x0000000102b78040 chromedriver + 4276288
+19  chromedriver                        0x0000000102b86a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+{
+    "implementation_errors": [
+        {
+            "error": "ElementClickInterceptedException",
+            "description": "The test script is trying to click on a radio button element that is not clickable due to another element intercepting the click.",
+            "suggestion": "To fix this, you can use JavaScript to scroll the element into view before clicking on it. You can also try clicking on the label element associated with the radio button instead of the radio button itself."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 71, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 28, in test_scenario_0
+    hobbies.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type="checkbox" id="hobbies-checkbox-1" class="custom-control-input" value="1"> is not clickable at point (476, 577). Other element would receive the click: <div class="react-datepicker__week">...</div>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000100c2e940 chromedriver + 4368704
+1   chromedriver                        0x0000000100c26dd4 chromedriver + 4337108
+2   chromedriver                        0x000000010084ac04 chromedriver + 289796
+3   chromedriver                        0x000000010089288c chromedriver + 583820
+4   chromedriver                        0x0000000100890e20 chromedriver + 577056
+5   chromedriver                        0x000000010088efac chromedriver + 569260
+6   chromedriver                        0x000000010088e13c chromedriver + 565564
+7   chromedriver                        0x0000000100883940 chromedriver + 522560
+8   chromedriver                        0x0000000100883368 chromedriver + 521064
+9   chromedriver                        0x00000001008c55ec chromedriver + 792044
+10  chromedriver                        0x0000000100881ab4 chromedriver + 514740
+11  chromedriver                        0x000000010088250c chromedriver + 517388
+12  chromedriver                        0x0000000100bf2e5c chromedriver + 4124252
+13  chromedriver                        0x0000000100bf7c4c chromedriver + 4144204
+14  chromedriver                        0x0000000100bd8824 chromedriver + 4016164
+15  chromedriver                        0x0000000100bf857c chromedriver + 4146556
+16  chromedriver                        0x0000000100bca2d8 chromedriver + 3957464
+17  chromedriver                        0x0000000100c17ec4 chromedriver + 4275908
+18  chromedriver                        0x0000000100c18040 chromedriver + 4276288
+19  chromedriver                        0x0000000100c26a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 1 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 73, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 29, in test_scenario_0
+    hobbies.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input type="checkbox" id="hobbies-checkbox-1" class="custom-control-input" value="1"> is not clickable at point (476, 10). Other element would receive the click: <div class="react-datepicker__day-names">...</div>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000104d3a940 chromedriver + 4368704
+1   chromedriver                        0x0000000104d32dd4 chromedriver + 4337108
+2   chromedriver                        0x0000000104956c04 chromedriver + 289796
+3   chromedriver                        0x000000010499e88c chromedriver + 583820
+4   chromedriver                        0x000000010499ce20 chromedriver + 577056
+5   chromedriver                        0x000000010499afac chromedriver + 569260
+6   chromedriver                        0x000000010499a13c chromedriver + 565564
+7   chromedriver                        0x000000010498f940 chromedriver + 522560
+8   chromedriver                        0x000000010498f368 chromedriver + 521064
+9   chromedriver                        0x00000001049d15ec chromedriver + 792044
+10  chromedriver                        0x000000010498dab4 chromedriver + 514740
+11  chromedriver                        0x000000010498e50c chromedriver + 517388
+12  chromedriver                        0x0000000104cfee5c chromedriver + 4124252
+13  chromedriver                        0x0000000104d03c4c chromedriver + 4144204
+14  chromedriver                        0x0000000104ce4824 chromedriver + 4016164
+15  chromedriver                        0x0000000104d0457c chromedriver + 4146556
+16  chromedriver                        0x0000000104cd62d8 chromedriver + 3957464
+17  chromedriver                        0x0000000104d23ec4 chromedriver + 4275908
+18  chromedriver                        0x0000000104d24040 chromedriver + 4276288
+19  chromedriver                        0x0000000104d32a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 2 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 73, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 29, in test_scenario_0
+    hobbies.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <label title="" for="hobbies-checkbox-1" class="custom-control-label">...</label> is not clickable at point (515, 12). Other element would receive the click: <div class="react-datepicker__day-name">...</div>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x0000000104db2940 chromedriver + 4368704
+1   chromedriver                        0x0000000104daadd4 chromedriver + 4337108
+2   chromedriver                        0x00000001049cec04 chromedriver + 289796
+3   chromedriver                        0x0000000104a1688c chromedriver + 583820
+4   chromedriver                        0x0000000104a14e20 chromedriver + 577056
+5   chromedriver                        0x0000000104a12fac chromedriver + 569260
+6   chromedriver                        0x0000000104a1213c chromedriver + 565564
+7   chromedriver                        0x0000000104a07940 chromedriver + 522560
+8   chromedriver                        0x0000000104a07368 chromedriver + 521064
+9   chromedriver                        0x0000000104a495ec chromedriver + 792044
+10  chromedriver                        0x0000000104a05ab4 chromedriver + 514740
+11  chromedriver                        0x0000000104a0650c chromedriver + 517388
+12  chromedriver                        0x0000000104d76e5c chromedriver + 4124252
+13  chromedriver                        0x0000000104d7bc4c chromedriver + 4144204
+14  chromedriver                        0x0000000104d5c824 chromedriver + 4016164
+15  chromedriver                        0x0000000104d7c57c chromedriver + 4146556
+16  chromedriver                        0x0000000104d4e2d8 chromedriver + 3957464
+17  chromedriver                        0x0000000104d9bec4 chromedriver + 4275908
+18  chromedriver                        0x0000000104d9c040 chromedriver + 4276288
+19  chromedriver                        0x0000000104daaa34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Your test execution output in 3 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 73, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 29, in test_scenario_0
+    hobbies.click()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 94, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <label title="" for="hobbies-checkbox-1" class="custom-control-label">...</label> is not clickable at point (515, 12). Other element would receive the click: <div class="react-datepicker__day-name">...</div>
+  (Session info: chrome=124.0.6367.207)
+Stacktrace:
+0   chromedriver                        0x000000010309a940 chromedriver + 4368704
+1   chromedriver                        0x0000000103092dd4 chromedriver + 4337108
+2   chromedriver                        0x0000000102cb6c04 chromedriver + 289796
+3   chromedriver                        0x0000000102cfe88c chromedriver + 583820
+4   chromedriver                        0x0000000102cfce20 chromedriver + 577056
+5   chromedriver                        0x0000000102cfafac chromedriver + 569260
+6   chromedriver                        0x0000000102cfa13c chromedriver + 565564
+7   chromedriver                        0x0000000102cef940 chromedriver + 522560
+8   chromedriver                        0x0000000102cef368 chromedriver + 521064
+9   chromedriver                        0x0000000102d315ec chromedriver + 792044
+10  chromedriver                        0x0000000102cedab4 chromedriver + 514740
+11  chromedriver                        0x0000000102cee50c chromedriver + 517388
+12  chromedriver                        0x000000010305ee5c chromedriver + 4124252
+13  chromedriver                        0x0000000103063c4c chromedriver + 4144204
+14  chromedriver                        0x0000000103044824 chromedriver + 4016164
+15  chromedriver                        0x000000010306457c chromedriver + 4146556
+16  chromedriver                        0x00000001030362d8 chromedriver + 3957464
+17  chromedriver                        0x0000000103083ec4 chromedriver + 4275908
+18  chromedriver                        0x0000000103084040 chromedriver + 4276288
+19  chromedriver                        0x0000000103092a34 chromedriver + 4336180
+20  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+21  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 76, in <module>
+    except ElementClickInterceptedException as e:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'ElementClickInterceptedException' is not defined
+
+Your test execution output in 4 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 74, in <module>
+    test_scenario_0()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 14, in test_scenario_0
+    first_name = driver.find_element(By.ID, "firstName")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 741, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 347, in execute
+    self.error_handler.check_response(response)
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="firstName"]"}
+  (Session info: chrome=124.0.6367.207); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104b56940 chromedriver + 4368704
+1   chromedriver                        0x0000000104b4edd4 chromedriver + 4337108
+2   chromedriver                        0x0000000104772c04 chromedriver + 289796
+3   chromedriver                        0x00000001047b4e00 chromedriver + 560640
+4   chromedriver                        0x00000001047ed5ec chromedriver + 792044
+5   chromedriver                        0x00000001047a9ab4 chromedriver + 514740
+6   chromedriver                        0x00000001047aa50c chromedriver + 517388
+7   chromedriver                        0x0000000104b1ae5c chromedriver + 4124252
+8   chromedriver                        0x0000000104b1fc4c chromedriver + 4144204
+9   chromedriver                        0x0000000104b00824 chromedriver + 4016164
+10  chromedriver                        0x0000000104b2057c chromedriver + 4146556
+11  chromedriver                        0x0000000104af22d8 chromedriver + 3957464
+12  chromedriver                        0x0000000104b3fec4 chromedriver + 4275908
+13  chromedriver                        0x0000000104b40040 chromedriver + 4276288
+14  chromedriver                        0x0000000104b4ea34 chromedriver + 4336180
+15  libsystem_pthread.dylib             0x0000000196952f94 _pthread_start + 136
+16  libsystem_pthread.dylib             0x000000019694dd34 thread_start + 8
+
+
+Execution time: 164.66202211380005 seconds
+
+GPT3.5 Prompt tokens: 65673, $0.0328365
+GPT3.5 Response tokens: 6197, $0.0092955
+
+GPT4 Prompt time: 65673, $0.65673
+GPT4 Response tokens: 6197, $0.18591
+

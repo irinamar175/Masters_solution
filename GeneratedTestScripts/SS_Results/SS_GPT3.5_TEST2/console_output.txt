@@ -1,0 +1,216 @@
+[{'scenario': 'Verify that user can search for ads by entering a keyword or phrase', 'test_steps': [{'action': 'Enter a valid keyword or phrase in the search input field', 'input_data': 'Car'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results related to the entered keyword or phrase are displayed'}, {'scenario': 'Verify that user can select a category for the search', 'test_steps': [{'action': 'Select a valid category from the dropdown menu', 'input_data': 'Darbs un bizness'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results related to the selected category are displayed'}, {'scenario': 'Verify that user can select a subcategory for the search', 'test_steps': [{'action': 'Select a valid subcategory from the dropdown menu', 'input_data': 'Pārdod'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results related to the selected subcategory are displayed'}, {'scenario': 'Verify that user can select a region for the search', 'test_steps': [{'action': 'Select a valid region from the dropdown menu', 'input_data': 'Rīga'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results related to the selected region are displayed'}, {'scenario': 'Verify that user can search for ads within a specific time period', 'test_steps': [{'action': 'Select a valid time period from the dropdown menu', 'input_data': 'Pēdējās 3 dienās'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results within the selected time period are displayed'}, {'scenario': 'Verify that user cannot search without entering a keyword or phrase', 'test_steps': [{'action': 'Leave the search input field empty', 'input_data': ''}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'An error message is displayed indicating that a keyword or phrase is required'}, {'scenario': 'Verify that user cannot search with an invalid category', 'test_steps': [{'action': 'Select an invalid category from the dropdown menu', 'input_data': 'Invalid Category'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'An error message is displayed indicating that the selected category is invalid'}]
+Template 
+from selenium import webdriver
+# Imports ...
+
+    
+def test_scenario_0():
+    """
+    {'scenario': 'Verify that user can search for ads by entering a keyword or phrase', 'test_steps': [{'action': 'Enter a valid keyword or phrase in the search input field', 'input_data': 'Car'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results related to the entered keyword or phrase are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_1():
+    """
+    {'scenario': 'Verify that user can select a category for the search', 'test_steps': [{'action': 'Select a valid category from the dropdown menu', 'input_data': 'Darbs un bizness'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results related to the selected category are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_2():
+    """
+    {'scenario': 'Verify that user can select a subcategory for the search', 'test_steps': [{'action': 'Select a valid subcategory from the dropdown menu', 'input_data': 'Pārdod'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results related to the selected subcategory are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_3():
+    """
+    {'scenario': 'Verify that user can select a region for the search', 'test_steps': [{'action': 'Select a valid region from the dropdown menu', 'input_data': 'Rīga'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results related to the selected region are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_4():
+    """
+    {'scenario': 'Verify that user can search for ads within a specific time period', 'test_steps': [{'action': 'Select a valid time period from the dropdown menu', 'input_data': 'Pēdējās 3 dienās'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'Search results within the selected time period are displayed'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_5():
+    """
+    {'scenario': 'Verify that user cannot search without entering a keyword or phrase', 'test_steps': [{'action': 'Leave the search input field empty', 'input_data': ''}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'An error message is displayed indicating that a keyword or phrase is required'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+def test_scenario_6():
+    """
+    {'scenario': 'Verify that user cannot search with an invalid category', 'test_steps': [{'action': 'Select an invalid category from the dropdown menu', 'input_data': 'Invalid Category'}, {'action': "Click on the 'Meklēt' button", 'input_data': ''}], 'expected_result': 'An error message is displayed indicating that the selected category is invalid'}
+    """
+    driver = webdriver.Chrome()
+    # Test implementation...
+    driver.quit()
+        
+if __name__ == "__main__":
+    
+    try:
+        test_scenario_0()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_0:", e)
+        
+    try:
+        test_scenario_1()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_1:", e)
+        
+    try:
+        test_scenario_2()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_2:", e)
+        
+    try:
+        test_scenario_3()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_3:", e)
+        
+    try:
+        test_scenario_4()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_4:", e)
+        
+    try:
+        test_scenario_5()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_5:", e)
+        
+    try:
+        test_scenario_6()
+    except AssertionError as e:
+        print("Assertion error in test_scenario_6:", e)
+        
+{
+    "missing_requirements": []
+}
+Your test execution output:  Assertion error in test_scenario_0: Search results failed!
+Assertion error in test_scenario_1: Category search failed!
+ Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 116, in <module>
+    test_scenario_2()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_scrip.py", line 42, in test_scenario_2
+    subcategory_dropdown.select_by_visible_text("Pārdod")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 137, in select_by_visible_text
+    raise NoSuchElementException(f"Could not locate element with visible text: {text}")
+selenium.common.exceptions.NoSuchElementException: Message: Could not locate element with visible text: Pārdod; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+
+{
+    "implementation_errors": [
+        {
+            "error": "Element not found",
+            "location": "test_scenario_2",
+            "suggestion": "Verify the element locator for the subcategory dropdown is correct and the element is present on the page before selecting it."
+        },
+        {
+            "error": "Incorrect assertion message",
+            "location": "test_scenario_0",
+            "suggestion": "Update the assertion message to accurately reflect the expected outcome of the test."
+        },
+        {
+            "error": "Incorrect assertion message",
+            "location": "test_scenario_1",
+            "suggestion": "Update the assertion message to accurately reflect the expected outcome of the test."
+        },
+        {
+            "error": "Incorrect assertion message",
+            "location": "test_scenario_2",
+            "suggestion": "Update the assertion message to accurately reflect the expected outcome of the test."
+        },
+        {
+            "error": "Incorrect assertion message",
+            "location": "test_scenario_3",
+            "suggestion": "Update the assertion message to accurately reflect the expected outcome of the test."
+        },
+        {
+            "error": "Incorrect assertion message",
+            "location": "test_scenario_4",
+            "suggestion": "Update the assertion message to accurately reflect the expected outcome of the test."
+        },
+        {
+            "error": "Incorrect assertion message",
+            "location": "test_scenario_5",
+            "suggestion": "Update the assertion message to accurately reflect the expected outcome of the test."
+        },
+        {
+            "error": "Incorrect assertion message",
+            "location": "test_scenario_6",
+            "suggestion": "Update the assertion message to accurately reflect the expected outcome of the test."
+        }
+    ]
+}
+Your test execution output in 0 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 116, in <module>
+    test_scenario_2()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_0.py", line 42, in test_scenario_2
+    subcategory_dropdown.select_by_visible_text("Pārdod")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 137, in select_by_visible_text
+    raise NoSuchElementException(f"Could not locate element with visible text: {text}")
+selenium.common.exceptions.NoSuchElementException: Message: Could not locate element with visible text: Pārdod; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+
+Your test execution output in 1 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 116, in <module>
+    test_scenario_2()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_1.py", line 42, in test_scenario_2
+    subcategory_dropdown.select_by_visible_text("Pārdod")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 137, in select_by_visible_text
+    raise NoSuchElementException(f"Could not locate element with visible text: {text}")
+selenium.common.exceptions.NoSuchElementException: Message: Could not locate element with visible text: Pārdod; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+
+Your test execution output in 2 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 116, in <module>
+    test_scenario_2()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_2.py", line 42, in test_scenario_2
+    subcategory_dropdown.select_by_visible_text("Pārdod")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 137, in select_by_visible_text
+    raise NoSuchElementException(f"Could not locate element with visible text: {text}")
+selenium.common.exceptions.NoSuchElementException: Message: Could not locate element with visible text: Pārdod; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+
+Your test execution output in 3 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 116, in <module>
+    test_scenario_2()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_3.py", line 42, in test_scenario_2
+    subcategory_dropdown.select_by_visible_text("Pārdod")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 137, in select_by_visible_text
+    raise NoSuchElementException(f"Could not locate element with visible text: {text}")
+selenium.common.exceptions.NoSuchElementException: Message: Could not locate element with visible text: Pārdod; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+
+Your test execution output in 4 run  Traceback (most recent call last):
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 116, in <module>
+    test_scenario_2()
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/master/outputs/test_script_fixed_4.py", line 42, in test_scenario_2
+    subcategory_dropdown.select_by_visible_text("Pārdod")
+  File "/Users/irinaozolina/PycharmProjects/GUIAI/venv1/lib/python3.12/site-packages/selenium/webdriver/support/select.py", line 137, in select_by_visible_text
+    raise NoSuchElementException(f"Could not locate element with visible text: {text}")
+selenium.common.exceptions.NoSuchElementException: Message: Could not locate element with visible text: Pārdod; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+
+Execution time: 227.36692881584167 seconds
+
+GPT3.5 Prompt tokens: 59184, $0.029592
+GPT3.5 Response tokens: 8844, $0.013266
+
+GPT4 Prompt time: 59184, $0.59184
+GPT4 Response tokens: 8844, $0.26532
+
