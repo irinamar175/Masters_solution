@@ -1,4 +1,4 @@
-# Master's Solution for Test Automation Using LLM
+# Solution for Test Automation Using LLMs
 
 ## Description
 This solution is created for automated test generation of graphical user interfaces using Large Language Models (LLMs).
