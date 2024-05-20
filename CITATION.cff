@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Solution for Test Automation Using LLMs"
+authors:
+  - family-names: "Ozolina"
+    given-names: "Irina"
+    name: "Irina Ozolina"
+date-released: 2024-05-20
+url: "https://github.com/irinamar175/Masters_solution"
